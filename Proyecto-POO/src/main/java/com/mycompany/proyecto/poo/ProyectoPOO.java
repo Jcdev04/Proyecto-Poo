@@ -15,5 +15,9 @@ public class ProyectoPOO {
         System.out.println("Hello World!");
         
         System.out.println("XDDD");
+        System.out.println("XDDD");
+        System.out.println("XDDD");
+        System.out.println("XDDD");
+        System.out.println("XDDD");
     }
 }
