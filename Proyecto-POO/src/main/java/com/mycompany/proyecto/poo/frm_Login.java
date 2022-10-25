@@ -4,11 +4,17 @@
  */
 package com.mycompany.proyecto.poo;
 
+import Clases.Persona;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author JOSUE CORDOVA
  */
 public class frm_Login extends javax.swing.JFrame {
+
+   
 
     /**
      * Creates new form frm_Login
@@ -26,47 +32,92 @@ public class frm_Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btn_ingresar = new javax.swing.JButton();
+        btn_registro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txt_codigo = new javax.swing.JTextField();
+        cbo_tipo = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        txt_contra = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Imágenes\\Capturas de pantalla\\lec2.png")); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setPreferredSize(new java.awt.Dimension(390, 90));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_ingresar.setText("Ingresar");
+        btn_ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_ingresarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 320, 60));
-        jButton1.getAccessibleContext().setAccessibleName("jButton1");
+        getContentPane().add(btn_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 100, 30));
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Imágenes\\Capturas de pantalla\\admin2.png")); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_registro.setText("Crear Cuenta");
+        btn_registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_registroActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 320, 60));
+        getContentPane().add(btn_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 110, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto-Poo\\Proyecto-POO\\src\\main\\java\\img\\jesus2.png")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 840, 570));
+        jLabel1.setText("Codigo ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 90, 30));
 
-        setSize(new java.awt.Dimension(852, 588));
+        jLabel2.setText("Password");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 70, 30));
+        getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 170, -1));
+
+        cbo_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante", "Administrador" }));
+        cbo_tipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbo_tipoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cbo_tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 120, -1));
+
+        jLabel3.setText("Tipo de Usuario");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 110, 30));
+        getContentPane().add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 172, 170, 30));
+
+        setSize(new java.awt.Dimension(454, 359));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.out.println("FUNCIONA");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
+        
+        String codigo = this.txt_codigo.getText();
+        String contra = this.txt_contra.getText();
+        int tipo = this.cbo_tipo.getSelectedIndex();
+        boolean verificacion = false;
+        Persona obj = new Persona();      
+        try {
+            verificacion = obj.get_validacion(codigo, contra);
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        if (verificacion == true && tipo == 0){
+            
+            frm_Lector ventana = new frm_Lector();
+            ventana.setVisible(true);
+            frm_Login.this.dispose();           
+        }
+        else{
+            System.out.println("ERROR");
+        }   
+    }//GEN-LAST:event_btn_ingresarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registroActionPerformed
+        
+        frm_Registrarse obj = new frm_Registrarse();
+        obj.setVisible(true);
+        frm_Login.this.dispose();
+       
+        
+    }//GEN-LAST:event_btn_registroActionPerformed
+
+    private void cbo_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_tipoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cbo_tipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,8 +155,13 @@ public class frm_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_ingresar;
+    private javax.swing.JButton btn_registro;
+    private javax.swing.JComboBox<String> cbo_tipo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txt_codigo;
+    private javax.swing.JPasswordField txt_contra;
     // End of variables declaration//GEN-END:variables
 }
