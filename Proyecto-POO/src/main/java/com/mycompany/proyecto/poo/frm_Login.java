@@ -50,6 +50,11 @@ public class frm_Login extends javax.swing.JFrame {
                 btn_ingresarActionPerformed(evt);
             }
         });
+        btn_ingresar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btn_ingresarKeyPressed(evt);
+            }
+        });
         getContentPane().add(btn_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 100, 30));
 
         btn_registro.setText("Crear Cuenta");
@@ -118,6 +123,9 @@ public class frm_Login extends javax.swing.JFrame {
     private void cbo_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_tipoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbo_tipoActionPerformed
+
+    private void btn_ingresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_ingresarKeyPressed
+    }//GEN-LAST:event_btn_ingresarKeyPressed
 
     /**
      * @param args the command line arguments

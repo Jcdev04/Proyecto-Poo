@@ -6,6 +6,8 @@ package com.mycompany.proyecto.poo;
 
 import Clases.Persona;
 
+
+
 /**
  *
  * @author JOSUE CORDOVA
@@ -49,7 +51,7 @@ public class frm_Registrarse extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre:");
+        jLabel1.setText("Nombres:");
 
         jLabel2.setText("DNI");
 
@@ -213,7 +215,15 @@ public class frm_Registrarse extends javax.swing.JFrame {
 
     private void btn_registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarseActionPerformed
         String dni = this.txt_dni.getText();
-        String nombre = this.txt_nombre.getText();
+        if (dni.matches("^[0-9]{8}$"))
+        {
+            System.out.println("V");
+        }
+        else {
+            System.out.println("INVALIDO");
+        }
+      
+        String nombre = this.txt_nombre.getText();      
         String paterno = this.txt_paterno.getText();
         String materno = this.txt_materno.getText();
         String codigo = this.txt_codigo.getText();
