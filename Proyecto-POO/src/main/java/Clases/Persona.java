@@ -97,7 +97,7 @@ public class Persona {
             System.out.println(e.getMessage());
         }
     }
-     public boolean get_validacion(String user_cod, String user_contra) throws FileNotFoundException, IOException{      
+    public boolean get_validacion(String user_cod, String user_contra) throws FileNotFoundException, IOException{      
         BufferedReader br = new BufferedReader(new FileReader(ruta));
         String fila;
         while((fila=br.readLine())!=null){
@@ -111,6 +111,19 @@ public class Persona {
         br.close();
         return false;
     }
+      public boolean get_repetido(String doc) throws FileNotFoundException, IOException{      
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        String fila;
+        while((fila=br.readLine())!=null){
+            if(doc.equals(fila.split("\\|")[0])){
+                return true;
+            }                                              
+        }      
+        br.close();
+        return false;
+    }
+    
+     
     
     
 }

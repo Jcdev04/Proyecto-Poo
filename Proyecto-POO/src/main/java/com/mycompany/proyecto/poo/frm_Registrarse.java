@@ -5,6 +5,9 @@
 package com.mycompany.proyecto.poo;
 
 import Clases.Persona;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -214,15 +217,7 @@ public class frm_Registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarseActionPerformed
-        String dni = this.txt_dni.getText();
-        if (dni.matches("^[0-9]{8}$"))
-        {
-            System.out.println("V");
-        }
-        else {
-            System.out.println("INVALIDO");
-        }
-      
+        String dni = this.txt_dni.getText();   
         String nombre = this.txt_nombre.getText();      
         String paterno = this.txt_paterno.getText();
         String materno = this.txt_materno.getText();
@@ -233,8 +228,22 @@ public class frm_Registrarse extends javax.swing.JFrame {
         {
             sexo= "M";
         }                  
+
         Persona obj = new Persona(nombre,paterno,materno,dni,codigo,sexo,contra);
-        obj.registrarPersona();
+        try {
+            boolean repetido = obj.get_repetido(dni);
+            if(repetido == false){
+                obj.registrarPersona();
+                System.out.println("NO REPETIDO");
+            }
+            else{
+                System.out.println("REPETIDO");
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+
        
        
     }//GEN-LAST:event_btn_registrarseActionPerformed

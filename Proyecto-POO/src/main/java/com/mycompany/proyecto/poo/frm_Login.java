@@ -97,6 +97,7 @@ public class frm_Login extends javax.swing.JFrame {
         Persona obj = new Persona();      
         try {
             verificacion = obj.get_validacion(codigo, contra);
+            
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
