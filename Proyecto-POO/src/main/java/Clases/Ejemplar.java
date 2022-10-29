@@ -42,7 +42,5 @@ public class Ejemplar {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-   
-   
     
 }

@@ -43,8 +43,6 @@ public class frm_Loggin extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         pnl_ingresar = new javax.swing.JPanel();
         lbl_ingresar = new javax.swing.JLabel();
-        pnl_registro = new javax.swing.JPanel();
-        lbl_registro = new javax.swing.JLabel();
         pnl_head = new javax.swing.JPanel();
         pnl_cerrar = new javax.swing.JPanel();
         lbl_cerrar = new javax.swing.JLabel();
@@ -153,50 +151,20 @@ public class frm_Loggin extends javax.swing.JFrame {
         pnl_ingresar.setLayout(pnl_ingresarLayout);
         pnl_ingresarLayout.setHorizontalGroup(
             pnl_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_ingresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addGroup(pnl_ingresarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnl_ingresarLayout.setVerticalGroup(
             pnl_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_ingresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ingresarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        pnl_fondo.add(pnl_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 110, 40));
-
-        pnl_registro.setBackground(new java.awt.Color(0, 134, 190));
-        pnl_registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnl_registro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnl_registroMouseClicked(evt);
-            }
-        });
-
-        lbl_registro.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        lbl_registro.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_registro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_registro.setText("CREAR CUENTA");
-        lbl_registro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lbl_registroMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lbl_registroMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnl_registroLayout = new javax.swing.GroupLayout(pnl_registro);
-        pnl_registro.setLayout(pnl_registroLayout);
-        pnl_registroLayout.setHorizontalGroup(
-            pnl_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_registro, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-        );
-        pnl_registroLayout.setVerticalGroup(
-            pnl_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_registroLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbl_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        pnl_fondo.add(pnl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 130, 40));
+        pnl_fondo.add(pnl_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 110, 40));
 
         pnl_head.setBackground(new java.awt.Color(255, 255, 255));
         pnl_head.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -306,14 +274,6 @@ public class frm_Loggin extends javax.swing.JFrame {
         pnl_ingresar.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_lbl_ingresarMouseExited
 
-    private void lbl_registroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_registroMouseEntered
-        pnl_registro.setBackground(new Color(0,150,223));
-    }//GEN-LAST:event_lbl_registroMouseEntered
-
-    private void lbl_registroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_registroMouseExited
-        pnl_registro.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_lbl_registroMouseExited
-
     private void txt_userMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_userMousePressed
         if(txt_user.getText().equals("Ingrese su codigo de usuario")){
             txt_user.setText("");
@@ -341,10 +301,6 @@ public class frm_Loggin extends javax.swing.JFrame {
     private void pnl_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_ingresarMouseClicked
         System.out.println("INGRESAR");
     }//GEN-LAST:event_pnl_ingresarMouseClicked
-
-    private void pnl_registroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_registroMouseClicked
-        System.out.println("REGISTRAR");
-    }//GEN-LAST:event_pnl_registroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -393,12 +349,10 @@ public class frm_Loggin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl_cerrar;
     private javax.swing.JLabel lbl_ingresar;
-    private javax.swing.JLabel lbl_registro;
     private javax.swing.JPanel pnl_cerrar;
     private javax.swing.JPanel pnl_fondo;
     private javax.swing.JPanel pnl_head;
     private javax.swing.JPanel pnl_ingresar;
-    private javax.swing.JPanel pnl_registro;
     private javax.swing.JPasswordField txt_pass;
     private javax.swing.JTextField txt_user;
     // End of variables declaration//GEN-END:variables
