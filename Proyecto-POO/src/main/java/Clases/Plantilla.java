@@ -9,13 +9,13 @@ import java.io.IOException;
 
 
 
-public class Persona {
+public class Plantilla {
     
     private String nombre, ap_paterno, ap_materno, dni, codigo, sexo, contrasenia;
     private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
     File file;
 
-    public Persona(String nombre, String ap_paterno, String ap_materno, String dni, String codigo, String sexo, String contrasenia) {
+    public Plantilla(String nombre, String ap_paterno, String ap_materno, String dni, String codigo, String sexo, String contrasenia) {
         this.nombre = nombre;
         this.ap_paterno = ap_paterno;
         this.ap_materno = ap_materno;
@@ -25,7 +25,7 @@ public class Persona {
         this.contrasenia = contrasenia;
         file = new File(ruta);
     }
-    public Persona(){
+    public Plantilla(){
        
         file = new File(ruta);      
     }

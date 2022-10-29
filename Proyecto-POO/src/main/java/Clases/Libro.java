@@ -4,33 +4,33 @@
  */
 package Clases;
 
-/**
- *
- * @author User
- */
 public class Libro {
-    private String ID_Libro;
+    private String libro_id;
     private String titulo;
     private String autor;
-    private String categoria;
-    private int stock;
-    private int libros_disponibles;
+    private String genero;
+    private String a_publicacion;
+    private String nombre_editorial;
+    private int n_ejemplares;
+    private int ejemplares_disponibles;
 
-    public Libro(String ID_Libro, String titulo, String autor, String categoria, int stock, int libros_disponibles) {
-        this.ID_Libro = ID_Libro;
+    public Libro(String libro_id, String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
+        this.libro_id = libro_id;
         this.titulo = titulo;
         this.autor = autor;
-        this.categoria = categoria;
-        this.stock = stock;
-        this.libros_disponibles = libros_disponibles;
+        this.genero = genero;
+        this.a_publicacion = a_publicacion;
+        this.nombre_editorial = nombre_editorial;
+        this.n_ejemplares = n_ejemplares;
+        this.ejemplares_disponibles = ejemplares_disponibles;
     }
 
-    public String getID_Libro() {
-        return ID_Libro;
+    public String getLibro_id() {
+        return libro_id;
     }
 
-    public void setID_Libro(String ID_Libro) {
-        this.ID_Libro = ID_Libro;
+    public void setLibro_id(String libro_id) {
+        this.libro_id = libro_id;
     }
 
     public String getTitulo() {
@@ -49,30 +49,52 @@ public class Libro {
         this.autor = autor;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public int getStock() {
-        return stock;
+    public String getA_publicacion() {
+        return a_publicacion;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setA_publicacion(String a_publicacion) {
+        this.a_publicacion = a_publicacion;
     }
 
-    public int getLibros_disponibles() {
-        return libros_disponibles;
+    public String getNombre_editorial() {
+        return nombre_editorial;
     }
 
-    public void setLibros_disponibles(int libros_disponibles) {
-        this.libros_disponibles = libros_disponibles;
+    public void setNombre_editorial(String nombre_editorial) {
+        this.nombre_editorial = nombre_editorial;
+    }
+
+    public int getN_ejemplares() {
+        return n_ejemplares;
+    }
+
+    public void setN_ejemplares(int n_ejemplares) {
+        this.n_ejemplares = n_ejemplares;
+    }
+
+    public int getEjemplares_disponibles() {
+        return ejemplares_disponibles;
+    }
+
+    public void setEjemplares_disponibles(int ejemplares_disponibles) {
+        this.ejemplares_disponibles = ejemplares_disponibles;
     }
     
+    public void prestar(){
+        
+    }
     
+    public void consultar_prestamo(){
+        
+    }
     
 }

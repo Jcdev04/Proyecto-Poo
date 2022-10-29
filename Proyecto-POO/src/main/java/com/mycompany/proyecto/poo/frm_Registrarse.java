@@ -4,7 +4,7 @@
  */
 package com.mycompany.proyecto.poo;
 
-import Clases.Persona;
+import Clases.Plantilla;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -229,7 +229,7 @@ public class frm_Registrarse extends javax.swing.JFrame {
             sexo= "M";
         }                  
 
-        Persona obj = new Persona(nombre,paterno,materno,dni,codigo,sexo,contra);
+        Plantilla obj = new Plantilla(nombre,paterno,materno,dni,codigo,sexo,contra);
         try {
             boolean repetido = obj.get_repetido(dni);
             if(repetido == false){
