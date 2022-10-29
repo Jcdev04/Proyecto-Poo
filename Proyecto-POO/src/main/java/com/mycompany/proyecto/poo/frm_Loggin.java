@@ -68,7 +68,7 @@ public class frm_Loggin extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("BIBLIOTECA ");
-        pnl_fondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 150, 50));
+        pnl_fondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 160, 50));
 
         jLabel2.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
@@ -94,7 +94,7 @@ public class frm_Loggin extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
-        pnl_fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 250, 500));
+        pnl_fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 270, 500));
 
         txt_user.setText("Ingrese su codigo de usuario");
         txt_user.setBorder(null);
@@ -187,9 +187,7 @@ public class frm_Loggin extends javax.swing.JFrame {
         pnl_registro.setLayout(pnl_registroLayout);
         pnl_registroLayout.setHorizontalGroup(
             pnl_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_registroLayout.createSequentialGroup()
-                .addComponent(lbl_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(lbl_registro, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
         );
         pnl_registroLayout.setVerticalGroup(
             pnl_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,7 +196,7 @@ public class frm_Loggin extends javax.swing.JFrame {
                 .addComponent(lbl_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl_fondo.add(pnl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 110, 40));
+        pnl_fondo.add(pnl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 130, 40));
 
         pnl_head.setBackground(new java.awt.Color(255, 255, 255));
         pnl_head.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
