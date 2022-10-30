@@ -25,11 +25,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab1.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }
 
     /**
@@ -44,29 +44,38 @@ public class frm_Sistema extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         tab1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
         tab2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         tab3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         tab4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
         tab5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
         tab6 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
         jPanel8 = new javax.swing.JPanel();
         jp1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jp2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jp3 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jp4 = new javax.swing.JPanel();
         jp5 = new javax.swing.JPanel();
         jp6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 134, 190));
 
-        tab1.setBackground(new java.awt.Color(204, 255, 255));
+        tab1.setBackground(new java.awt.Color(0, 134, 190));
         tab1.setPreferredSize(new java.awt.Dimension(200, 50));
         tab1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -74,7 +83,9 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Página Principal");
 
         javax.swing.GroupLayout tab1Layout = new javax.swing.GroupLayout(tab1);
@@ -82,19 +93,25 @@ public class frm_Sistema extends javax.swing.JFrame {
         tab1Layout.setHorizontalGroup(
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addGap(35, 35, 35))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator3)
+                .addContainerGap())
         );
         tab1Layout.setVerticalGroup(
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        tab2.setBackground(new java.awt.Color(204, 255, 255));
+        tab2.setBackground(new java.awt.Color(0, 134, 190));
+        tab2.setForeground(new java.awt.Color(255, 255, 255));
         tab2.setPreferredSize(new java.awt.Dimension(200, 50));
         tab2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,7 +119,9 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Registrar Lector");
 
         javax.swing.GroupLayout tab2Layout = new javax.swing.GroupLayout(tab2);
@@ -112,17 +131,23 @@ public class frm_Sistema extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addGap(35, 35, 35))
+            .addGroup(tab2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addContainerGap())
         );
         tab2Layout.setVerticalGroup(
             tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        tab3.setBackground(new java.awt.Color(204, 255, 255));
+        tab3.setBackground(new java.awt.Color(0, 134, 190));
+        tab3.setForeground(new java.awt.Color(255, 255, 255));
         tab3.setPreferredSize(new java.awt.Dimension(200, 50));
         tab3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -130,27 +155,35 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Añadir Libro");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
         tab3.setLayout(tab3Layout);
         tab3Layout.setHorizontalGroup(
             tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tab3Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(tab3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator2)
+                .addContainerGap())
         );
         tab3Layout.setVerticalGroup(
             tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        tab4.setBackground(new java.awt.Color(204, 255, 255));
+        tab4.setBackground(new java.awt.Color(0, 134, 190));
+        tab4.setForeground(new java.awt.Color(255, 255, 255));
         tab4.setPreferredSize(new java.awt.Dimension(200, 50));
         tab4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,27 +191,35 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Préstar");
 
         javax.swing.GroupLayout tab4Layout = new javax.swing.GroupLayout(tab4);
         tab4.setLayout(tab4Layout);
         tab4Layout.setHorizontalGroup(
             tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tab4Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator4)
+                .addContainerGap())
         );
         tab4Layout.setVerticalGroup(
             tab4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        tab5.setBackground(new java.awt.Color(204, 255, 255));
+        tab5.setBackground(new java.awt.Color(0, 134, 190));
+        tab5.setForeground(new java.awt.Color(255, 255, 255));
         tab5.setPreferredSize(new java.awt.Dimension(200, 50));
         tab5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -186,27 +227,35 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Devolver");
 
         javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
         tab5.setLayout(tab5Layout);
         tab5Layout.setHorizontalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tab5Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
                 .addComponent(jLabel7)
-                .addGap(76, 76, 76))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator5)
+                .addContainerGap())
         );
         tab5Layout.setVerticalGroup(
             tab5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        tab6.setBackground(new java.awt.Color(204, 255, 255));
+        tab6.setBackground(new java.awt.Color(0, 134, 190));
+        tab6.setForeground(new java.awt.Color(255, 255, 255));
         tab6.setPreferredSize(new java.awt.Dimension(200, 50));
         tab6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -214,21 +263,32 @@ public class frm_Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Historial");
 
         javax.swing.GroupLayout tab6Layout = new javax.swing.GroupLayout(tab6);
         tab6.setLayout(tab6Layout);
         tab6Layout.setHorizontalGroup(
             tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tab6Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(tab6Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jSeparator6)
+                    .addContainerGap()))
         );
         tab6Layout.setVerticalGroup(
             tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+            .addGroup(tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(tab6Layout.createSequentialGroup()
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 43, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -245,58 +305,82 @@ public class frm_Sistema extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(114, 114, 114)
                 .addComponent(tab1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tab2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tab3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tab4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tab5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tab6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
-        jp1.setBackground(new java.awt.Color(153, 255, 153));
+        jp1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setText("Bienvenido al menú principal");
 
         javax.swing.GroupLayout jp1Layout = new javax.swing.GroupLayout(jp1);
         jp1.setLayout(jp1Layout);
         jp1Layout.setHorizontalGroup(
             jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGroup(jp1Layout.createSequentialGroup()
+                .addGap(177, 177, 177)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(205, Short.MAX_VALUE))
         );
         jp1Layout.setVerticalGroup(
             jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 559, Short.MAX_VALUE)
+            .addGroup(jp1Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel1)
+                .addContainerGap(453, Short.MAX_VALUE))
         );
 
-        jp2.setBackground(new java.awt.Color(255, 255, 153));
+        jp2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setText("Registrando estudiante");
 
         javax.swing.GroupLayout jp2Layout = new javax.swing.GroupLayout(jp2);
         jp2.setLayout(jp2Layout);
         jp2Layout.setHorizontalGroup(
             jp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGroup(jp2Layout.createSequentialGroup()
+                .addGap(246, 246, 246)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(255, Short.MAX_VALUE))
         );
         jp2Layout.setVerticalGroup(
             jp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 559, Short.MAX_VALUE)
+            .addGroup(jp2Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(462, Short.MAX_VALUE))
         );
 
-        jp3.setBackground(new java.awt.Color(255, 204, 153));
+        jp3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setText("Ingresando Libros");
 
         javax.swing.GroupLayout jp3Layout = new javax.swing.GroupLayout(jp3);
         jp3.setLayout(jp3Layout);
         jp3Layout.setHorizontalGroup(
             jp3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
+            .addGroup(jp3Layout.createSequentialGroup()
+                .addGap(235, 235, 235)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         jp3Layout.setVerticalGroup(
             jp3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 559, Short.MAX_VALUE)
+            .addGroup(jp3Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel9)
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
         jp4.setBackground(new java.awt.Color(255, 102, 102));
@@ -400,11 +484,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab1.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab1MouseClicked
 
     private void tab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseClicked
@@ -416,11 +500,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab2.setBackground(Color.white);
-        tab1.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab1.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab2MouseClicked
 
     private void tab3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab3MouseClicked
@@ -432,11 +516,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab3.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab1.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab1.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab3MouseClicked
 
     private void tab4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab4MouseClicked
@@ -448,11 +532,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab4.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab1.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab1.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab4MouseClicked
 
     private void tab5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab5MouseClicked
@@ -464,11 +548,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(false);
         
         tab5.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab1.setBackground(new Color(204,255,255));
-        tab6.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab1.setBackground(new Color(0,134,190));
+        tab6.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab5MouseClicked
 
     private void tab6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab6MouseClicked
@@ -480,11 +564,11 @@ public class frm_Sistema extends javax.swing.JFrame {
         jp6.setVisible(true);
         
         tab6.setBackground(Color.white);
-        tab2.setBackground(new Color(204,255,255));
-        tab3.setBackground(new Color(204,255,255));
-        tab4.setBackground(new Color(204,255,255));
-        tab5.setBackground(new Color(204,255,255));
-        tab1.setBackground(new Color(204,255,255));
+        tab2.setBackground(new Color(0,134,190));
+        tab3.setBackground(new Color(0,134,190));
+        tab4.setBackground(new Color(0,134,190));
+        tab5.setBackground(new Color(0,134,190));
+        tab1.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_tab6MouseClicked
 
     /**
@@ -523,14 +607,23 @@ public class frm_Sistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JPanel jp1;
     private javax.swing.JPanel jp2;
     private javax.swing.JPanel jp3;
