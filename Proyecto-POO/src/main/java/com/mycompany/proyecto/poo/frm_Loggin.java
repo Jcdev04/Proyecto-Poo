@@ -218,7 +218,7 @@ public class frm_Loggin extends javax.swing.JFrame {
             pnl_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_headLayout.createSequentialGroup()
                 .addComponent(pnl_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 660, Short.MAX_VALUE))
+                .addGap(0, 680, Short.MAX_VALUE))
         );
         pnl_headLayout.setVerticalGroup(
             pnl_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,7 +227,7 @@ public class frm_Loggin extends javax.swing.JFrame {
                 .addComponent(pnl_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl_fondo.add(pnl_head, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 40));
+        pnl_fondo.add(pnl_head, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

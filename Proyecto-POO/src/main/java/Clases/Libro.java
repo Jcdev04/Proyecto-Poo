@@ -4,15 +4,21 @@
  */
 package Clases;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Libro {
     private String libro_id;
     private String titulo;
     private String autor;
     private String genero;
     private String a_publicacion;
-    private String nombre_editorial;
+    private String editorial;
     private int n_ejemplares;
     private int ejemplares_disponibles;
+    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLibros.txt";
+    File file;
 
     public Libro(String libro_id, String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
         this.libro_id = libro_id;
@@ -20,10 +26,16 @@ public class Libro {
         this.autor = autor;
         this.genero = genero;
         this.a_publicacion = a_publicacion;
-        this.nombre_editorial = nombre_editorial;
+        this.editorial = nombre_editorial;
         this.n_ejemplares = n_ejemplares;
         this.ejemplares_disponibles = ejemplares_disponibles;
+        file = new File(ruta);
     }
+    public Libro(){
+       
+        file = new File(ruta);      
+    }
+    
 
     public String getLibro_id() {
         return libro_id;
@@ -66,11 +78,11 @@ public class Libro {
     }
 
     public String getNombre_editorial() {
-        return nombre_editorial;
+        return editorial;
     }
 
     public void setNombre_editorial(String nombre_editorial) {
-        this.nombre_editorial = nombre_editorial;
+        this.editorial = nombre_editorial;
     }
 
     public int getN_ejemplares() {
@@ -95,6 +107,17 @@ public class Libro {
     
     public void consultar_prestamo(){
         
+    }
+    public void registrarLibro() {
+        
+        try{
+            FileWriter fw = new FileWriter(ruta,true);           
+            String fila= this.libro_id+"|"+this.titulo+"|"+ this.autor+"|"+this.genero+"|"+this.a_publicacion+"|"+this.editorial+"|"+this.n_ejemplares+"|"+this.ejemplares_disponibles+"\n";          
+            fw.write(fila);
+            fw.close();
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
     }
     
 }

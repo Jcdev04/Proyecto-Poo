@@ -13,7 +13,7 @@ public class Prestamo extends Operacion{
     public Prestamo(String dni, String fecha, String ejemplar_id) {
         super(dni, fecha, ejemplar_id);
     }
-    
+     
     
     
 }
