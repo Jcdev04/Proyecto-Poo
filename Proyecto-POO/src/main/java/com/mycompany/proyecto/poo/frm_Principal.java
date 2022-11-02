@@ -3,10 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.proyecto.poo;
+import Clases.Lector;
 import Clases.Libro;
 import java.time.LocalDate;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,7 +23,7 @@ public class frm_Principal extends javax.swing.JFrame {
     int dia = fecha.getDayOfMonth();
     int mes = fecha.getMonthValue();
     int anio_f = fecha.getYear();
-    
+    DefaultTableModel modelo;
   
  
     /**
@@ -29,7 +33,16 @@ public class frm_Principal extends javax.swing.JFrame {
         
         
         initComponents();
-        
+        modelo = new DefaultTableModel();
+        modelo.addColumn("ID"); 
+        modelo.addColumn("Nombres");
+        modelo.addColumn("Apellidos");
+        modelo.addColumn("Correo");
+        modelo.addColumn("Teléfono");
+        modelo.addColumn("Estado del Lector");
+        this.tab_lectores.setModel(modelo);
+        llenar_tabla();
+       
         pnl1.setVisible(true);
         pnl2.setVisible(false);
         pnl3.setVisible(false);
@@ -37,7 +50,12 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl5.setVisible(false);
         pnl6.setVisible(false);
         txt_id.setVisible(false);
-        tbl_lectores.setVisible(false);
+        tab_lectores.setVisible(false);
+        
+        
+    
+        
+        
     }
 
     /**
@@ -76,13 +94,16 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl2 = new javax.swing.JPanel();
         txt_id = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_lectores = new javax.swing.JTable();
+        tab_lectores = new javax.swing.JTable();
         jSeparator10 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        pnl_eliminarLector = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        pnl_modificarLector = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        pnl_nuevoLector = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
         pnl3 = new javax.swing.JPanel();
         txt_idLibro = new javax.swing.JTextField();
         txt_cantidadLibro = new javax.swing.JTextField();
@@ -447,7 +468,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl2.setBackground(new java.awt.Color(255, 0, 51));
         pnl2.setPreferredSize(new java.awt.Dimension(660, 600));
 
-        tbl_lectores.setModel(new javax.swing.table.DefaultTableModel(
+        tab_lectores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -455,8 +476,8 @@ public class frm_Principal extends javax.swing.JFrame {
 
             }
         ));
-        tbl_lectores.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jScrollPane1.setViewportView(tbl_lectores);
+        tab_lectores.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setViewportView(tab_lectores);
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("BUSCAR");
@@ -472,37 +493,60 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 107, Short.MAX_VALUE)
+        pnl_eliminarLector.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnl_eliminarLectorMouseClicked(evt);
+            }
+        });
+
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("ELIMINAR");
+
+        javax.swing.GroupLayout pnl_eliminarLectorLayout = new javax.swing.GroupLayout(pnl_eliminarLector);
+        pnl_eliminarLector.setLayout(pnl_eliminarLectorLayout);
+        pnl_eliminarLectorLayout.setHorizontalGroup(
+            pnl_eliminarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        pnl_eliminarLectorLayout.setVerticalGroup(
+            pnl_eliminarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 107, Short.MAX_VALUE)
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("MODIFICAR");
+
+        javax.swing.GroupLayout pnl_modificarLectorLayout = new javax.swing.GroupLayout(pnl_modificarLector);
+        pnl_modificarLector.setLayout(pnl_modificarLectorLayout);
+        pnl_modificarLectorLayout.setHorizontalGroup(
+            pnl_modificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_modificarLectorLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        pnl_modificarLectorLayout.setVerticalGroup(
+            pnl_modificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 107, Short.MAX_VALUE)
+        pnl_nuevoLector.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnl_nuevoLectorMouseClicked(evt);
+            }
+        });
+
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("NUEVO");
+
+        javax.swing.GroupLayout pnl_nuevoLectorLayout = new javax.swing.GroupLayout(pnl_nuevoLector);
+        pnl_nuevoLector.setLayout(pnl_nuevoLectorLayout);
+        pnl_nuevoLectorLayout.setHorizontalGroup(
+            pnl_nuevoLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+        pnl_nuevoLectorLayout.setVerticalGroup(
+            pnl_nuevoLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnl2Layout = new javax.swing.GroupLayout(pnl2);
@@ -520,11 +564,11 @@ public class frm_Principal extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_modificarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
         pnl2Layout.setVerticalGroup(
@@ -541,9 +585,9 @@ public class frm_Principal extends javax.swing.JFrame {
                     .addComponent(txt_id, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnl_modificarLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -882,7 +926,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl5.setVisible(false);
         pnl6.setVisible(false);
         txt_id.setVisible(false);
-        tbl_lectores.setVisible(false);
+        tab_lectores.setVisible(false);
    
         
     }//GEN-LAST:event_tab1MouseClicked
@@ -896,7 +940,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl5.setVisible(false);
         pnl6.setVisible(false);
         txt_id.setVisible(true);
-        tbl_lectores.setVisible(true);
+        tab_lectores.setVisible(true);
     }//GEN-LAST:event_tab2MouseClicked
 
     private void tab3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab3MouseClicked
@@ -1012,6 +1056,24 @@ public class frm_Principal extends javax.swing.JFrame {
         Libro obj = new Libro(id,titulo,autor,genero,anio,editorial,cantidad,l_prestar);
         obj.registrarLibro();                    
     }//GEN-LAST:event_pnl_subirLibroMouseClicked
+
+    private void pnl_eliminarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_eliminarLectorMouseClicked
+        try{
+            Lector obj=new Lector();
+            String id =this.txt_id.getText();
+            obj.set_eliminarLector(id);
+            llenar_tabla();            
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_pnl_eliminarLectorMouseClicked
+
+    private void pnl_nuevoLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_nuevoLectorMouseClicked
+        
+        
+        
+        
+    }//GEN-LAST:event_pnl_nuevoLectorMouseClicked
     
     private String mesActual(int mes){
         int month = fecha.getMonthValue();
@@ -1055,6 +1117,20 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         }
         return m_actual;    
+    }
+    public void llenar_tabla(){
+        Lector obj = new Lector();
+        try {
+            modelo.setRowCount(0);
+            ArrayList<String> filas= obj.getLectores();
+            for (String fila : filas) {
+                String[] reg = fila.split("\\|");
+                modelo.addRow(reg);
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
     }
             
     
@@ -1122,7 +1198,10 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1131,9 +1210,6 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -1154,7 +1230,10 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel pnl4;
     private javax.swing.JPanel pnl5;
     private javax.swing.JPanel pnl6;
+    private javax.swing.JPanel pnl_eliminarLector;
     private javax.swing.JPanel pnl_fecha;
+    private javax.swing.JPanel pnl_modificarLector;
+    private javax.swing.JPanel pnl_nuevoLector;
     private javax.swing.JPanel pnl_subirLibro;
     private javax.swing.JPanel tab1;
     private javax.swing.JPanel tab2;
@@ -1162,7 +1241,7 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel tab4;
     private javax.swing.JPanel tab5;
     private javax.swing.JPanel tab6;
-    private javax.swing.JTable tbl_lectores;
+    private javax.swing.JTable tab_lectores;
     private javax.swing.JTextField txt_anioLibro;
     private javax.swing.JTextField txt_autorLibro;
     private javax.swing.JTextField txt_cantidadLibro;

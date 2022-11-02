@@ -22,11 +22,11 @@ public class Lector {
     private String apellidos;
     private String correo;
     private String telefono;
-    private boolean estado_lector;
+    private String estado_lector;
     private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
     File file;
 
-    public Lector(String dni, String nombre, String apellidos, String correo, String telefono, boolean estado_lector) {
+    public Lector(String dni, String nombre, String apellidos, String correo, String telefono, String estado_lector) {
         this.dni = dni;
         this.nombres = nombre;
         this.apellidos = apellidos;
@@ -49,11 +49,11 @@ public class Lector {
         this.nombres = nombres;
     }
 
-    public boolean getEstado_lector() {
+    public String getEstado_lector() {
         return estado_lector;
     }
 
-    public void setEstado_lector(boolean estado_lector) {
+    public void setEstado_lector(String estado_lector) {
         this.estado_lector = estado_lector;
     }
 
@@ -115,11 +115,30 @@ public class Lector {
         
         String fila;
         while((fila=br.readLine())!=null){
-            coleccion.add(fila);
-            System.out.println(fila);
+            coleccion.add(fila);           
         }
         br.close();
         return coleccion;
+    }
+    public void set_eliminarLector(String codigo) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String linea;
+        //Creando un archivo temporal
+        File temporal=new File(ruta);
+        FileWriter fw=new FileWriter(temporal, true);
+        
+        while((linea=br.readLine())!=null){
+            String cod=linea.split("\\|")[0];
+            if(!cod.equals(codigo)){
+                fw.write(linea+"\n");
+            }
+        }
+        br.close();
+        fw.close(); 
+        file.delete();
+        File lector =new File(ruta);
+        temporal.renameTo(lector);    
+        this.file=lector;
     }
        
 }
