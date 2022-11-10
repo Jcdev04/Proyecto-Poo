@@ -17,7 +17,7 @@ public class Libro {
     private String editorial;
     private int n_ejemplares;
     private int ejemplares_disponibles;
-    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLibros.txt";
+    private String ruta = "D:\\RegistroDeLibros.txt";
     File file;
 
     public Libro(String libro_id, String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {

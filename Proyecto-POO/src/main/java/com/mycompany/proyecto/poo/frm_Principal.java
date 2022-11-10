@@ -13,7 +13,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
+ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
@@ -56,13 +58,8 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl4.setVisible(false);
         pnl5.setVisible(false);
         pnl6.setVisible(false);
+        pnlModificarLector.setVisible(false);        
         pnlAgregarLector.setVisible(false);
-        
-        
-        
-    
-        
-        
     }
 
     /**
@@ -103,8 +100,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tab_lectores = new javax.swing.JTable();
         jSeparator10 = new javax.swing.JSeparator();
-        pnl_buscarLector = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
         pnl_eliminarLector = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         pnl_modificarLector = new javax.swing.JPanel();
@@ -142,6 +137,25 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl5 = new javax.swing.JPanel();
         pnl6 = new javax.swing.JPanel();
         pnlAgregarLector = new javax.swing.JPanel();
+        jSeparator16 = new javax.swing.JSeparator();
+        jLabel28 = new javax.swing.JLabel();
+        jSeparator17 = new javax.swing.JSeparator();
+        jLabel30 = new javax.swing.JLabel();
+        jSeparator18 = new javax.swing.JSeparator();
+        jLabel32 = new javax.swing.JLabel();
+        jSeparator20 = new javax.swing.JSeparator();
+        jSeparator21 = new javax.swing.JSeparator();
+        jLabel34 = new javax.swing.JLabel();
+        pnl_subirLector1 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jSeparator22 = new javax.swing.JSeparator();
+        txt_nombresLector1 = new javax.swing.JTextField();
+        txt_apellidosLector1 = new javax.swing.JTextField();
+        txt_dniLector1 = new javax.swing.JTextField();
+        txt_telefonoLector1 = new javax.swing.JTextField();
+        txt_correoLector1 = new javax.swing.JTextField();
+        pnlModificarLector = new javax.swing.JPanel();
         jSeparator11 = new javax.swing.JSeparator();
         jLabel25 = new javax.swing.JLabel();
         jSeparator12 = new javax.swing.JSeparator();
@@ -151,7 +165,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jSeparator14 = new javax.swing.JSeparator();
         jSeparator15 = new javax.swing.JSeparator();
         jLabel29 = new javax.swing.JLabel();
-        pnl_subirLector = new javax.swing.JPanel();
+        pnl_Lectormodificado = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jSeparator19 = new javax.swing.JSeparator();
@@ -160,7 +174,6 @@ public class frm_Principal extends javax.swing.JFrame {
         txt_dniLector = new javax.swing.JTextField();
         txt_telefonoLector = new javax.swing.JTextField();
         txt_correoLector = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -219,7 +232,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 2, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\reloj.png")); // NOI18N
         jLabel9.setText("Hoy es "+ dia+ " de "+mesActual(mes)+" del "+anio_f);
 
         javax.swing.GroupLayout navLayout = new javax.swing.GroupLayout(nav);
@@ -247,7 +259,18 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\menu.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://i.ibb.co/7Yx9ktC/Temp-32x32-removebg-preview.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
+        jLabel1.setText("Biblioteca Virtual");
 
         jSeparator1.setBackground(new java.awt.Color(124, 246, 244));
 
@@ -263,7 +286,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\principal.png")); // NOI18N
         jLabel2.setText("PRINCIPAL");
 
         javax.swing.GroupLayout tab1Layout = new javax.swing.GroupLayout(tab1);
@@ -288,7 +310,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\registro.png")); // NOI18N
         jLabel3.setText("USUARIOS");
 
         javax.swing.GroupLayout tab2Layout = new javax.swing.GroupLayout(tab2);
@@ -314,7 +335,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\añadir.png")); // NOI18N
         jLabel4.setText("AÑADIR LIBRO");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
@@ -340,7 +360,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\prestamo.png")); // NOI18N
         jLabel5.setText("PRESTAMO");
 
         javax.swing.GroupLayout tab4Layout = new javax.swing.GroupLayout(tab4);
@@ -365,7 +384,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\devolution.png")); // NOI18N
         jLabel6.setText("DEVOLUCION");
 
         javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
@@ -390,7 +408,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\historial.png")); // NOI18N
         jLabel7.setText("HISTORIAL");
 
         javax.swing.GroupLayout tab6Layout = new javax.swing.GroupLayout(tab6);
@@ -483,17 +500,23 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl1.setLayout(pnl1Layout);
         pnl1Layout.setHorizontalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
+            .addGap(0, 660, Short.MAX_VALUE)
         );
         pnl1Layout.setVerticalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         bg_principal.add(pnl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
         pnl2.setBackground(new java.awt.Color(255, 0, 51));
         pnl2.setPreferredSize(new java.awt.Dimension(660, 600));
+
+        txt_barraBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_barraBuscarKeyPressed(evt);
+            }
+        });
 
         tab_lectores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -510,26 +533,6 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tab_lectores);
-
-        pnl_buscarLector.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnl_buscarLectorMouseClicked(evt);
-            }
-        });
-
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("BUSCAR");
-
-        javax.swing.GroupLayout pnl_buscarLectorLayout = new javax.swing.GroupLayout(pnl_buscarLector);
-        pnl_buscarLector.setLayout(pnl_buscarLectorLayout);
-        pnl_buscarLectorLayout.setHorizontalGroup(
-            pnl_buscarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-        );
-        pnl_buscarLectorLayout.setVerticalGroup(
-            pnl_buscarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-        );
 
         pnl_eliminarLector.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -599,14 +602,6 @@ public class frm_Principal extends javax.swing.JFrame {
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator10)
-                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnl_buscarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -614,25 +609,28 @@ public class frm_Principal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
+            .addGroup(pnl2Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl2Layout.setVerticalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl2Layout.createSequentialGroup()
-                        .addComponent(pnl_buscarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(143, 143, 143)
+                .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(pnl_modificarLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         bg_principal.add(pnl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -678,25 +676,21 @@ public class frm_Principal extends javax.swing.JFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Libro  ID");
 
         jSeparator2.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel12.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Titulo");
 
         jSeparator3.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Autor");
 
         jSeparator4.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel14.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Género");
 
         jSeparator5.setBackground(new java.awt.Color(49, 122, 199));
@@ -710,13 +704,11 @@ public class frm_Principal extends javax.swing.JFrame {
         });
 
         jLabel15.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Editorial");
 
         jSeparator6.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel16.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Año de publicacion");
 
@@ -735,7 +727,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jSeparator9.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Disponilbes");
 
@@ -764,7 +755,6 @@ public class frm_Principal extends javax.swing.JFrame {
         );
 
         jLabel19.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("N° Ejemplares");
 
         javax.swing.GroupLayout pnl3Layout = new javax.swing.GroupLayout(pnl3);
@@ -946,24 +936,199 @@ public class frm_Principal extends javax.swing.JFrame {
         bg_principal.add(pnl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
         pnlAgregarLector.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAgregarLector.setForeground(new java.awt.Color(0, 0, 0));
+
+        jSeparator16.setBackground(new java.awt.Color(49, 122, 199));
+
+        jLabel28.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel28.setText("Apellidos");
+
+        jSeparator17.setBackground(new java.awt.Color(49, 122, 199));
+
+        jLabel30.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel30.setText("Correo");
+
+        jSeparator18.setBackground(new java.awt.Color(49, 122, 199));
+
+        jLabel32.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel32.setText("Telefono");
+
+        jSeparator20.setBackground(new java.awt.Color(49, 122, 199));
+
+        jSeparator21.setBackground(new java.awt.Color(49, 122, 199));
+
+        jLabel34.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("DNI");
+
+        pnl_subirLector1.setBackground(new java.awt.Color(49, 122, 199));
+        pnl_subirLector1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnl_subirLector1MouseClicked(evt);
+            }
+        });
+
+        jLabel35.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("Agregar Lector");
+        jLabel35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout pnl_subirLector1Layout = new javax.swing.GroupLayout(pnl_subirLector1);
+        pnl_subirLector1.setLayout(pnl_subirLector1Layout);
+        pnl_subirLector1Layout.setHorizontalGroup(
+            pnl_subirLector1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_subirLector1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        pnl_subirLector1Layout.setVerticalGroup(
+            pnl_subirLector1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+        );
+
+        jLabel36.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel36.setText("Nombres");
+
+        jSeparator22.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        txt_nombresLector1.setBorder(null);
+        txt_nombresLector1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_nombresLector1KeyTyped(evt);
+            }
+        });
+
+        txt_apellidosLector1.setBorder(null);
+        txt_apellidosLector1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_apellidosLector1KeyTyped(evt);
+            }
+        });
+
+        txt_dniLector1.setBorder(null);
+        txt_dniLector1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dniLector1KeyTyped(evt);
+            }
+        });
+
+        txt_telefonoLector1.setBorder(null);
+        txt_telefonoLector1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_telefonoLector1KeyTyped(evt);
+            }
+        });
+
+        txt_correoLector1.setBorder(null);
+
+        javax.swing.GroupLayout pnlAgregarLectorLayout = new javax.swing.GroupLayout(pnlAgregarLector);
+        pnlAgregarLector.setLayout(pnlAgregarLectorLayout);
+        pnlAgregarLectorLayout.setHorizontalGroup(
+            pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                                    .addGap(41, 41, 41)
+                                    .addComponent(jLabel36))
+                                .addComponent(jSeparator17)
+                                .addComponent(jSeparator16, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_nombresLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_apellidosLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_correoLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(65, 65, 65))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(111, 111, 111))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(93, 93, 93)))))
+                .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(pnl_subirLector1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_dniLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jSeparator21)
+                                .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                                .addComponent(jSeparator20))
+                            .addComponent(txt_telefonoLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(261, Short.MAX_VALUE))
+        );
+        pnlAgregarLectorLayout.setVerticalGroup(
+            pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jSeparator22)
+                        .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                            .addComponent(jLabel36)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txt_nombresLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(10, 10, 10)
+                            .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(14, 14, 14)
+                            .addComponent(jLabel28)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txt_apellidosLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(23, 23, 23)
+                            .addComponent(jLabel30)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txt_correoLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addGap(10, 10, 10)
+                        .addComponent(txt_dniLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_telefonoLector1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(pnl_subirLector1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(147, Short.MAX_VALUE))
+        );
+
+        bg_principal.add(pnlAgregarLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 500));
+
+        pnlModificarLector.setBackground(new java.awt.Color(255, 255, 255));
 
         jSeparator11.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel25.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Apellidos");
 
         jSeparator12.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel26.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setText("Correo");
 
         jSeparator13.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel27.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setText("Telefono");
 
         jSeparator14.setBackground(new java.awt.Color(49, 122, 199));
@@ -971,38 +1136,37 @@ public class frm_Principal extends javax.swing.JFrame {
         jSeparator15.setBackground(new java.awt.Color(49, 122, 199));
 
         jLabel29.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("DNI");
 
-        pnl_subirLector.setBackground(new java.awt.Color(49, 122, 199));
-        pnl_subirLector.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnl_Lectormodificado.setBackground(new java.awt.Color(49, 122, 199));
+        pnl_Lectormodificado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnl_subirLectorMouseClicked(evt);
+                pnl_LectormodificadoMouseClicked(evt);
             }
         });
 
         jLabel31.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("Agregar Lector");
+        jLabel31.setText("Modificar lector");
         jLabel31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout pnl_subirLectorLayout = new javax.swing.GroupLayout(pnl_subirLector);
-        pnl_subirLector.setLayout(pnl_subirLectorLayout);
-        pnl_subirLectorLayout.setHorizontalGroup(
-            pnl_subirLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_subirLectorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+        javax.swing.GroupLayout pnl_LectormodificadoLayout = new javax.swing.GroupLayout(pnl_Lectormodificado);
+        pnl_Lectormodificado.setLayout(pnl_LectormodificadoLayout);
+        pnl_LectormodificadoLayout.setHorizontalGroup(
+            pnl_LectormodificadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_LectormodificadoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        pnl_subirLectorLayout.setVerticalGroup(
-            pnl_subirLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        pnl_LectormodificadoLayout.setVerticalGroup(
+            pnl_LectormodificadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
         jLabel33.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(0, 0, 0));
         jLabel33.setText("Nombres");
 
         jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -1037,24 +1201,17 @@ public class frm_Principal extends javax.swing.JFrame {
 
         txt_correoLector.setBorder(null);
 
-        jButton1.setText("MODIFICAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlAgregarLectorLayout = new javax.swing.GroupLayout(pnlAgregarLector);
-        pnlAgregarLector.setLayout(pnlAgregarLectorLayout);
-        pnlAgregarLectorLayout.setHorizontalGroup(
-            pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
-                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlModificarLectorLayout = new javax.swing.GroupLayout(pnlModificarLector);
+        pnlModificarLector.setLayout(pnlModificarLectorLayout);
+        pnlModificarLectorLayout.setHorizontalGroup(
+            pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlModificarLectorLayout.createSequentialGroup()
+                .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                         .addGap(194, 194, 194)
-                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                                     .addGap(41, 41, 41)
                                     .addComponent(jLabel33))
                                 .addComponent(jSeparator12)
@@ -1064,44 +1221,42 @@ public class frm_Principal extends javax.swing.JFrame {
                             .addComponent(txt_apellidosLector, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_correoLector, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(65, 65, 65))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlModificarLectorLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlModificarLectorLayout.createSequentialGroup()
                                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(111, 111, 111))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlModificarLectorLayout.createSequentialGroup()
                                 .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(93, 93, 93)))))
                 .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                    .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(pnl_subirLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addComponent(pnl_Lectormodificado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_dniLector, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jSeparator15, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                                 .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                                 .addComponent(jSeparator14, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
                             .addComponent(txt_telefonoLector, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
-        pnlAgregarLectorLayout.setVerticalGroup(
-            pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+        pnlModificarLectorLayout.setVerticalGroup(
+            pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                 .addGap(111, 111, 111)
-                .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlModificarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jSeparator19)
-                        .addGroup(pnlAgregarLectorLayout.createSequentialGroup()
+                        .addGroup(pnlModificarLectorLayout.createSequentialGroup()
                             .addComponent(jLabel33)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txt_nombresLector, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1119,7 +1274,7 @@ public class frm_Principal extends javax.swing.JFrame {
                             .addComponent(txt_correoLector, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgregarLectorLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlModificarLectorLayout.createSequentialGroup()
                         .addComponent(jLabel29)
                         .addGap(10, 10, 10)
                         .addComponent(txt_dniLector, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1132,14 +1287,12 @@ public class frm_Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49)
-                        .addGroup(pnlAgregarLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                            .addComponent(pnl_subirLector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(pnl_Lectormodificado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(152, Short.MAX_VALUE))
         );
 
-        bg_principal.add(pnlAgregarLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 500));
+        bg_principal.add(pnlModificarLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 500));
 
         bg.add(bg_principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 850, 600));
 
@@ -1276,22 +1429,30 @@ public class frm_Principal extends javax.swing.JFrame {
 
         deshabilitarPanels(7); 
         limpiarCajas();
-        
     }//GEN-LAST:event_pnl_nuevoLectorMouseClicked
 
-    private void pnl_subirLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_subirLectorMouseClicked
+    private void pnl_LectormodificadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_LectormodificadoMouseClicked
+        try {
+            int indice_fila=this.tab_lectores.getSelectedRow();
+            String codigo=this.tab_lectores.getValueAt(indice_fila,0).toString();
+            String dni = txt_dniLector.getText();
+            String nombres = txt_nombresLector.getText();
+            String apellidos = txt_apellidosLector.getText();
+            String correo = txt_correoLector.getText();
+            String telefono = txt_telefonoLector.getText();
+            String estado = "Habilitado";
+            Lector obj = new Lector();
+            obj.modificarLector(codigo, dni, nombres, apellidos,telefono, correo, estado);
+            llenar_tabla();
+            deshabilitarPanels(2);
+            limpiarCajas();
+        } catch (IOException ex) {
+            llenar_tabla();
+            System.out.println(ex.getMessage());
+        }
         
-        String dni = txt_dniLector.getText();
-        String nombres = txt_nombresLector.getText();
-        String apellidos = txt_apellidosLector.getText();
-        String correo = txt_correoLector.getText();
-        String telefono = txt_telefonoLector.getText();
-        String estado = "Habilitado";
-        Lector obj = new Lector(dni,nombres,apellidos,correo,telefono,estado);
-        obj.registrarLector();
-        llenar_tabla();
-        limpiarCajas();
-    }//GEN-LAST:event_pnl_subirLectorMouseClicked
+        
+    }//GEN-LAST:event_pnl_LectormodificadoMouseClicked
 
     private void txt_dniLectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dniLectorKeyTyped
         Character c = evt.getKeyChar();
@@ -1324,8 +1485,11 @@ public class frm_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_apellidosLectorKeyTyped
 
     private void pnl_modificarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_modificarLectorMouseClicked
-        deshabilitarPanels(7);
-        
+        if(tab_lectores.getSelectedRow()!=-1){
+            deshabilitarPanels(8);
+        }else{
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
+        }
     }//GEN-LAST:event_pnl_modificarLectorMouseClicked
 
     private void tab_lectoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_lectoresMouseClicked
@@ -1340,37 +1504,45 @@ public class frm_Principal extends javax.swing.JFrame {
             txt_correoLector.setText(datos[3]);
             txt_telefonoLector.setText(datos[4]);
             txt_dniLector.setText(datos[5]);
-            
-            
         } catch (IOException ex) {
             Logger.getLogger(frm_Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tab_lectoresMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        try {
-            int indice_fila=this.tab_lectores.getSelectedRow();
-            String codigo=this.tab_lectores.getValueAt(indice_fila,0).toString();
-            String dni = txt_dniLector.getText();
-            String nombres = txt_nombresLector.getText();
-            String apellidos = txt_apellidosLector.getText();
-            String correo = txt_correoLector.getText();
-            String telefono = txt_telefonoLector.getText();
-            String estado = "Habilitado";
-            Lector obj = new Lector();
-            obj.modificarLector(codigo, dni, nombres, apellidos,telefono, correo, estado);
+    private void pnl_subirLector1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_subirLector1MouseClicked
+        String dni = txt_dniLector1.getText();
+        String nombres = txt_nombresLector1.getText();
+        String apellidos = txt_apellidosLector1.getText();
+        String correo = txt_correoLector1.getText();
+        String telefono = txt_telefonoLector1.getText();
+        String estado = "Habilitado";
+        if(dni.isEmpty() || nombres.isEmpty() || apellidos.isEmpty() || correo.isEmpty() || telefono.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Falta ingresar uno o más elementos");
+        }else{
+            Lector obj = new Lector(dni,nombres,apellidos,correo,telefono,estado);
+            obj.registrarLector();
             llenar_tabla();
-        } catch (IOException ex) {
-            llenar_tabla();
-            System.out.println(ex.getMessage());
+            limpiarCajas2();
         }
-        
-    
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_pnl_subirLector1MouseClicked
 
-    private void pnl_buscarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_buscarLectorMouseClicked
-        
+    private void txt_nombresLector1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nombresLector1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nombresLector1KeyTyped
+
+    private void txt_apellidosLector1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_apellidosLector1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_apellidosLector1KeyTyped
+
+    private void txt_dniLector1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dniLector1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dniLector1KeyTyped
+
+    private void txt_telefonoLector1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_telefonoLector1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_telefonoLector1KeyTyped
+
+    private void txt_barraBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_barraBuscarKeyPressed
         try {
             String dni = txt_barraBuscar.getText();
             Lector obj = new Lector();
@@ -1387,8 +1559,7 @@ public class frm_Principal extends javax.swing.JFrame {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-        
-    }//GEN-LAST:event_pnl_buscarLectorMouseClicked
+    }//GEN-LAST:event_txt_barraBuscarKeyPressed
 
     private String mesActual(int mes){
         int month = fecha.getMonthValue();
@@ -1471,8 +1642,8 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl4.setVisible(false);
         pnl5.setVisible(false);
         pnl6.setVisible(false);
+        pnlModificarLector.setVisible(false);
         pnlAgregarLector.setVisible(false);
-        
         switch (x){
             case 1 -> {           
             pnl1.setVisible(true);
@@ -1494,7 +1665,10 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         case 7 -> {
             pnlAgregarLector.setVisible(true);
-            }           
+            }
+        case 8->{
+            pnlModificarLector.setVisible(true);
+        }
         }           
     }
     private void limpiarCajas(){
@@ -1505,7 +1679,14 @@ public class frm_Principal extends javax.swing.JFrame {
         txt_telefonoLector.setText("");
         txt_nombresLector.requestFocus();
     }
-            
+    private void limpiarCajas2(){
+        txt_dniLector1.setText("");
+        txt_nombresLector1.setText("");
+        txt_apellidosLector1.setText("");
+        txt_correoLector1.setText("");
+        txt_telefonoLector1.setText("");
+        txt_nombresLector1.requestFocus();
+    }
     
     
     
@@ -1559,7 +1740,6 @@ public class frm_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JPanel bg_principal;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1573,16 +1753,21 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1597,8 +1782,14 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
+    private javax.swing.JSeparator jSeparator17;
+    private javax.swing.JSeparator jSeparator18;
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator20;
+    private javax.swing.JSeparator jSeparator21;
+    private javax.swing.JSeparator jSeparator22;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -1616,12 +1807,13 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel pnl5;
     private javax.swing.JPanel pnl6;
     private javax.swing.JPanel pnlAgregarLector;
-    private javax.swing.JPanel pnl_buscarLector;
+    private javax.swing.JPanel pnlModificarLector;
+    private javax.swing.JPanel pnl_Lectormodificado;
     private javax.swing.JPanel pnl_eliminarLector;
     private javax.swing.JPanel pnl_fecha;
     private javax.swing.JPanel pnl_modificarLector;
     private javax.swing.JPanel pnl_nuevoLector;
-    private javax.swing.JPanel pnl_subirLector;
+    private javax.swing.JPanel pnl_subirLector1;
     private javax.swing.JPanel pnl_subirLibro;
     private javax.swing.JPanel tab1;
     private javax.swing.JPanel tab2;
@@ -1632,17 +1824,22 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JTable tab_lectores;
     private javax.swing.JTextField txt_anioLibro;
     private javax.swing.JTextField txt_apellidosLector;
+    private javax.swing.JTextField txt_apellidosLector1;
     private javax.swing.JTextField txt_autorLibro;
     private javax.swing.JTextField txt_barraBuscar;
     private javax.swing.JTextField txt_cantidadLibro;
     private javax.swing.JTextField txt_correoLector;
+    private javax.swing.JTextField txt_correoLector1;
     private javax.swing.JTextField txt_dniLector;
+    private javax.swing.JTextField txt_dniLector1;
     private javax.swing.JTextField txt_editorialLibro;
     private javax.swing.JTextField txt_geneLibro;
     private javax.swing.JTextField txt_idLibro;
     private javax.swing.JTextField txt_nombresLector;
+    private javax.swing.JTextField txt_nombresLector1;
     private javax.swing.JTextField txt_prestaLibro;
     private javax.swing.JTextField txt_telefonoLector;
+    private javax.swing.JTextField txt_telefonoLector1;
     private javax.swing.JTextField txt_tituloLibro;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Plantilla {
     
     private String nombre, ap_paterno, ap_materno, dni, codigo, sexo, contrasenia;
-    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
+    private String ruta = "C:\\RegistroDeLectores.txt";
     File file;
 
     public Plantilla(String nombre, String ap_paterno, String ap_materno, String dni, String codigo, String sexo, String contrasenia) {

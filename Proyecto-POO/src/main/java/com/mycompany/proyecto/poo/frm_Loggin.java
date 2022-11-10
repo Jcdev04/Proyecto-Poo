@@ -101,6 +101,11 @@ public class frm_Loggin extends javax.swing.JFrame {
                 txt_userMousePressed(evt);
             }
         });
+        txt_user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_userActionPerformed(evt);
+            }
+        });
         pnl_fondo.add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 290, 40));
 
         txt_pass.setText("**************");
@@ -301,6 +306,10 @@ public class frm_Loggin extends javax.swing.JFrame {
     private void pnl_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_ingresarMouseClicked
         System.out.println("INGRESAR");
     }//GEN-LAST:event_pnl_ingresarMouseClicked
+
+    private void txt_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_userActionPerformed
 
     /**
      * @param args the command line arguments
