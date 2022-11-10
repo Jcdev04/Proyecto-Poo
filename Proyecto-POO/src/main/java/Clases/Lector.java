@@ -24,7 +24,7 @@ public class Lector {
     private String telefono;
     private String estado_lector;
     private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
-    File file;
+    File file ;
 
     public Lector(String dni, String nombre, String apellidos, String correo, String telefono, String estado_lector) {
         this.dni = dni;
@@ -102,12 +102,37 @@ public class Lector {
         
         try{
             FileWriter fw = new FileWriter(ruta,true);           
-            String fila= this.dni+"|"+this.nombres+"|"+ this.apellidos+"|"+this.correo+"|"+this.telefono+"|"+this.estado_lector+"\n";          
+            String fila= get_generar_codigo()+"|"+this.nombres+"|"+ this.apellidos+"|"+this.correo+"|"+this.telefono+"|"+this.dni+"|"+this.estado_lector+"\n";          
             fw.write(fila);
             fw.close();
         }catch(IOException e){
             System.out.println(e.getMessage());
         }
+    }
+    public int get_generar_codigo() throws IOException{
+        //BufferedReader br = new BufferedReader(get_archivo());
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        String fila; int codigo=0;
+        while((fila=br.readLine())!=null){
+            codigo=Integer.parseInt(fila.split("\\|")[0]);
+        }
+        br.close();
+        return codigo+1;        
+    }
+    public String get_registro(String codigo) throws FileNotFoundException, IOException{
+        //FileReader fr=new FileReader(ruta);
+        //BufferedReader br=new BufferedReader(this.get_archivo());
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila, registro = null;
+        while((fila=br.readLine())!=null){
+            String cod=fila.split("\\|")[0];
+            if(cod.equals(codigo)){
+                registro=fila; break;
+            }
+        }
+        br.close();
+        //System.out.println(registro);
+        return registro;
     }
     public ArrayList<String> getLectores() throws FileNotFoundException, IOException{
         ArrayList<String> coleccion = new ArrayList<>();
@@ -120,16 +145,56 @@ public class Lector {
         br.close();
         return coleccion;
     }
-    public void set_eliminarLector(String codigo) throws FileNotFoundException, IOException{
-        BufferedReader br=new BufferedReader(new FileReader(ruta));
+    public ArrayList<String> getLectoresPorDni(String dni) throws FileNotFoundException, IOException{
+        ArrayList<String> coleccion = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        
+        String fila;
+        while((fila=br.readLine())!=null){
+            if(fila.split("\\|")[5].equals(dni)){
+               coleccion.add(fila);   
+            }                  
+        }
+        br.close();
+        return coleccion;
+    }
+   
+    
+    public void modificarLector(String codigo, String dni, String nombre, String apellidos, String telefono, String correo, String estado_lector) throws FileNotFoundException, IOException{
+        
+        BufferedReader br =new BufferedReader(new FileReader(ruta));
         String linea;
-        //Creando un archivo temporal
-        File temporal=new File(ruta);
+        
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Tempora.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
-            String cod=linea.split("\\|")[0];
-            if(!cod.equals(codigo)){
+            if(linea.split("\\|")[0].equals(codigo)){
+                String fila= get_generar_codigo()+"|"+this.nombres+"|"+ this.apellidos+"|"+this.correo+"|"+this.telefono+"|"+this.dni+"|"+this.estado_lector+"\n"; 
+                String f_modificado=codigo+"|"+nombre+"|"+apellidos+"|"+correo+"|"+telefono+"|"+dni+"|"+estado_lector+"\n"; 
+                fw.write(f_modificado);               
+            }else{
+                fw.write(linea+"\n");
+            }
+        }
+        br.close();
+        fw.close(); 
+        file.delete();
+        File lector=new File(ruta);
+        temporal.renameTo(lector);    
+        this.file=lector;
+    }   
+
+    public void set_eliminarLector(String nombre) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String linea;
+        //Creando un archivo temporal
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Tempora.txt");
+        FileWriter fw=new FileWriter(temporal, true);
+        
+        while((linea=br.readLine())!=null){
+            String nam=linea.split("\\|")[1];
+            if(!nam.equals(nombre)){
                 fw.write(linea+"\n");
             }
         }
@@ -140,5 +205,18 @@ public class Lector {
         temporal.renameTo(lector);    
         this.file=lector;
     }
+    
+    public boolean buscarLector(String dni) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila;
+        while((fila=br.readLine())!= null){
+            String igual = fila.split("\\|")[5];
+            if(igual.equals(dni)){
+                return true;
+            }
+        }
+        return false;
+    }
+
        
 }
