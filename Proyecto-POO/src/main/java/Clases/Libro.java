@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Libro {
     private String libro_id;
@@ -20,7 +21,7 @@ public class Libro {
     private String editorial;
     private int n_ejemplares;
     private int ejemplares_disponibles;
-    private String ruta = "D:\\RegistroDeLibros.txt";
+    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLibros.txt";
     File file;
 
     public Libro(String libro_id, String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
@@ -138,6 +139,28 @@ public class Libro {
         br.close();
         return confirmar;
     }
+    public ArrayList<String> getLibros() throws FileNotFoundException, IOException{
+        ArrayList<String> coleccion = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        
+        String fila;
+        while((fila=br.readLine())!=null){
+            coleccion.add(fila);           
+        }
+        br.close();
+        return coleccion;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

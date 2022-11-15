@@ -23,7 +23,7 @@ public class Lector {
     private String correo;
     private String telefono;
     private String estado_lector;
-    private String ruta ="D:\\RegistroDeLectores.txt";
+    private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
     File file ;
 
     public Lector(String dni, String nombre, String apellidos, String correo, String telefono, String estado_lector) {
@@ -165,7 +165,7 @@ public class Lector {
         BufferedReader br =new BufferedReader(new FileReader(ruta));
         String linea;
         
-        File temporal=new File("D:\\Temporal.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
@@ -189,7 +189,7 @@ public class Lector {
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String linea;
         //Creando un archivo temporal
-        File temporal=new File("D:\\Temporal.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
