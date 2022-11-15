@@ -95,6 +95,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl_fecha = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         pnl1 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
         pnl2 = new javax.swing.JPanel();
         txt_barraBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -184,7 +185,7 @@ public class frm_Principal extends javax.swing.JFrame {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nav.setBackground(new java.awt.Color(49, 122, 199));
+        nav.setBackground(new java.awt.Color(255, 255, 255));
         nav.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 navMouseDragged(evt);
@@ -196,7 +197,7 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         });
 
-        pn_cerrar.setBackground(new java.awt.Color(49, 122, 199));
+        pn_cerrar.setBackground(new java.awt.Color(255, 255, 255));
         pn_cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pn_cerrar.setPreferredSize(new java.awt.Dimension(40, 40));
         pn_cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -212,7 +213,6 @@ public class frm_Principal extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("X");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -231,7 +231,6 @@ public class frm_Principal extends javax.swing.JFrame {
         );
 
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 2, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Hoy es "+ dia+ " de "+mesActual(mes)+" del "+anio_f);
 
@@ -255,7 +254,7 @@ public class frm_Principal extends javax.swing.JFrame {
 
         bg.add(nav, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 40));
 
-        menu.setBackground(new java.awt.Color(49, 122, 199));
+        menu.setBackground(new java.awt.Color(0, 51, 153));
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -275,12 +274,18 @@ public class frm_Principal extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(124, 246, 244));
 
-        tab1.setBackground(new java.awt.Color(112, 125, 157));
+        tab1.setBackground(new java.awt.Color(0, 51, 153));
         tab1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab1.setPreferredSize(new java.awt.Dimension(260, 55));
         tab1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab1MouseExited(evt);
             }
         });
 
@@ -300,11 +305,17 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
-        tab2.setBackground(new java.awt.Color(112, 125, 157));
+        tab2.setBackground(new java.awt.Color(0, 51, 153));
         tab2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab2MouseExited(evt);
             }
         });
 
@@ -324,19 +335,25 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
-        tab3.setBackground(new java.awt.Color(112, 125, 157));
+        tab3.setBackground(new java.awt.Color(0, 51, 153));
         tab3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab3.setPreferredSize(new java.awt.Dimension(260, 55));
         tab3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab3MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab3MouseExited(evt);
+            }
         });
 
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("AÑADIR LIBRO");
+        jLabel4.setText("LIBROS");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
         tab3.setLayout(tab3Layout);
@@ -349,12 +366,18 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
-        tab4.setBackground(new java.awt.Color(112, 125, 157));
+        tab4.setBackground(new java.awt.Color(0, 51, 153));
         tab4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab4.setPreferredSize(new java.awt.Dimension(260, 55));
         tab4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab4MouseExited(evt);
             }
         });
 
@@ -374,11 +397,17 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
-        tab5.setBackground(new java.awt.Color(112, 125, 157));
+        tab5.setBackground(new java.awt.Color(0, 51, 153));
         tab5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab5MouseExited(evt);
             }
         });
 
@@ -398,11 +427,17 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
         );
 
-        tab6.setBackground(new java.awt.Color(112, 125, 157));
+        tab6.setBackground(new java.awt.Color(0, 51, 153));
         tab6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tab6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tab6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab6MouseExited(evt);
             }
         });
 
@@ -470,12 +505,12 @@ public class frm_Principal extends javax.swing.JFrame {
         bg_principal.setMinimumSize(new java.awt.Dimension(655, 600));
         bg_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnl_fecha.setBackground(new java.awt.Color(255, 51, 204));
+        pnl_fecha.setBackground(new java.awt.Color(0, 51, 153));
 
         jLabel10.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Hola que gusto tenerte de nuevo por aquí !!"
+        jLabel10.setText("Hola, que gusto tenerte de nuevo por aquí !!"
 
         );
 
@@ -497,15 +532,32 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl1.setBackground(new java.awt.Color(102, 255, 102));
         pnl1.setPreferredSize(new java.awt.Dimension(660, 600));
 
+        jLabel24.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://bnz05pap001files.storage.live.com/y4mZg6GDjHW4TSqAxdzOqLJhb3BpHXRLR3uBwyYiDQH7Wuf7nwRRxaV94xGBibRLLDhkOXmeHlzEti_KFQ-yvAD0TbHYvsrI8fo4eDA8ZPjdyhsjDhxDWDVKzM6BRvjrzQ55K-dmajsNrNHY9VtipmCmO0IRJBH0zfN3neNq4Q5LDSH-25F5uoY6XpCMazLIbnSDlxgI34V2AmcrdRQeNAmqwcOSYSXr1y7j9I9rH1JfoU?encodeFailures=1&width=851&height=501")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
+        jLabel24.setText("jLabel24");
+
         javax.swing.GroupLayout pnl1Layout = new javax.swing.GroupLayout(pnl1);
         pnl1.setLayout(pnl1Layout);
         pnl1Layout.setHorizontalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 851, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnl1Layout.setVerticalGroup(
             pnl1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         bg_principal.add(pnl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -604,24 +656,21 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl2Layout.setHorizontalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
-                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl2Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnl2Layout.createSequentialGroup()
-                                .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jSeparator10)))
-                    .addGroup(pnl2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pnl_modificarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnl_modificarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
+            .addGroup(pnl2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator10))
+                .addContainerGap())
             .addGroup(pnl2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1)
@@ -630,20 +679,20 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl2Layout.setVerticalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addGap(14, 14, 14)
                 .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(pnl_modificarLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         bg_principal.add(pnl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -1358,7 +1407,7 @@ public class frm_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_pn_cerrarMouseEntered
 
     private void pn_cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_cerrarMouseExited
-        pn_cerrar.setBackground(new Color(49,122,199));
+        pn_cerrar.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_pn_cerrarMouseExited
 
     private void pn_cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn_cerrarMouseClicked
@@ -1438,26 +1487,6 @@ public class frm_Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_pnl_subirLibroMouseClicked
 
-    private void pnl_eliminarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_eliminarLectorMouseClicked
-        try{
-            if(tab_lectores.getSelectedRow()!=-1){
-                Lector obj=new Lector();
-                String nombre = txt_nombresLector.getText();
-                obj.set_eliminarLector(nombre);
-                llenar_tabla();
-            }else{
-                JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
-            }
-        }catch(IOException e){
-            System.out.println(e.getMessage());
-        }
-    }//GEN-LAST:event_pnl_eliminarLectorMouseClicked
-
-    private void pnl_nuevoLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_nuevoLectorMouseClicked
-        deshabilitarPanels(7); 
-        limpiarCajas();
-    }//GEN-LAST:event_pnl_nuevoLectorMouseClicked
-
     private void pnl_LectormodificadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_LectormodificadoMouseClicked
         try {
             int indice_fila=this.tab_lectores.getSelectedRow();
@@ -1509,31 +1538,6 @@ public class frm_Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txt_apellidosLectorKeyTyped
 
-    private void pnl_modificarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_modificarLectorMouseClicked
-        if(tab_lectores.getSelectedRow()!=-1){
-            deshabilitarPanels(8);
-        }else{
-            JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
-        }
-    }//GEN-LAST:event_pnl_modificarLectorMouseClicked
-
-    private void tab_lectoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_lectoresMouseClicked
-        try {           
-            String codigo;
-            Lector obj_edi = new Lector();
-            int indice_fila=this.tab_lectores.getSelectedRow();
-            codigo=this.tab_lectores.getValueAt(indice_fila,0).toString();
-            String[] datos=obj_edi.get_registro(codigo).split("\\|");
-            txt_nombresLector.setText(datos[1]);
-            txt_apellidosLector.setText(datos[2]);
-            txt_correoLector.setText(datos[3]);
-            txt_telefonoLector.setText(datos[4]);
-            txt_dniLector.setText(datos[5]);
-        } catch (IOException ex) {
-            Logger.getLogger(frm_Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_tab_lectoresMouseClicked
-
     private void pnl_subirLector1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_subirLector1MouseClicked
         String dni = txt_dniLector1.getText();
         String nombres = txt_nombresLector1.getText();
@@ -1567,6 +1571,123 @@ public class frm_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_telefonoLector1KeyTyped
 
+    private void tab6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab6MouseEntered
+        // TODO add your handling code here:
+        tab6.setBackground(Color.white);
+        jLabel7.setForeground(Color.black);        
+    }//GEN-LAST:event_tab6MouseEntered
+
+    private void tab6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab6MouseExited
+        // TODO add your handling code here:
+        tab6.setBackground(new Color(0,51,153));
+        jLabel7.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab6MouseExited
+
+    private void tab5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab5MouseEntered
+        // TODO add your handling code here:
+        tab5.setBackground(Color.white);
+        jLabel6.setForeground(Color.black);
+    }//GEN-LAST:event_tab5MouseEntered
+
+    private void tab5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab5MouseExited
+        // TODO add your handling code here:
+        tab5.setBackground(new Color(0,51,153));
+        jLabel6.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab5MouseExited
+
+    private void tab4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab4MouseEntered
+        // TODO add your handling code here:
+        tab4.setBackground(Color.white);
+        jLabel5.setForeground(Color.black);
+    }//GEN-LAST:event_tab4MouseEntered
+
+    private void tab4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab4MouseExited
+        // TODO add your handling code here:
+        tab4.setBackground(new Color(0,51,153));
+        jLabel5.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab4MouseExited
+
+    private void tab3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab3MouseEntered
+        // TODO add your handling code here:
+        tab3.setBackground(Color.white);
+        jLabel4.setForeground(Color.black);
+    }//GEN-LAST:event_tab3MouseEntered
+
+    private void tab3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab3MouseExited
+        // TODO add your handling code here:
+        tab3.setBackground(new Color(0,51,153));
+        jLabel4.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab3MouseExited
+
+    private void tab2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseEntered
+        // TODO add your handling code here:
+        tab2.setBackground(Color.white);
+        jLabel3.setForeground(Color.black);
+    }//GEN-LAST:event_tab2MouseEntered
+
+    private void tab2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseExited
+        // TODO add your handling code here:
+        tab2.setBackground(new Color(0,51,153));
+        jLabel3.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab2MouseExited
+
+    private void tab1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab1MouseEntered
+        // TODO add your handling code here:
+        tab1.setBackground(Color.white);
+        jLabel2.setForeground(Color.black);
+    }//GEN-LAST:event_tab1MouseEntered
+
+    private void tab1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab1MouseExited
+        // TODO add your handling code here:
+        tab1.setBackground(new Color(0,51,153));
+        jLabel2.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_tab1MouseExited
+
+    private void pnl_nuevoLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_nuevoLectorMouseClicked
+        deshabilitarPanels(7);
+        limpiarCajas();
+    }//GEN-LAST:event_pnl_nuevoLectorMouseClicked
+
+    private void pnl_modificarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_modificarLectorMouseClicked
+        if(tab_lectores.getSelectedRow()!=-1){
+            deshabilitarPanels(8);
+        }else{
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
+        }
+    }//GEN-LAST:event_pnl_modificarLectorMouseClicked
+
+    private void pnl_eliminarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_eliminarLectorMouseClicked
+        try{
+            if(tab_lectores.getSelectedRow()!=-1){
+                Lector obj=new Lector();
+                String nombre = txt_nombresLector.getText();
+                obj.set_eliminarLector(nombre);
+                llenar_tabla();
+            }else{
+                JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
+            }
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_pnl_eliminarLectorMouseClicked
+
+    private void tab_lectoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_lectoresMouseClicked
+        try {
+            String codigo;
+            Lector obj_edi = new Lector();
+            int indice_fila=this.tab_lectores.getSelectedRow();
+            codigo=this.tab_lectores.getValueAt(indice_fila,0).toString();
+            String[] datos=obj_edi.get_registro(codigo).split("\\|");
+            txt_nombresLector.setText(datos[1]);
+            txt_apellidosLector.setText(datos[2]);
+            txt_correoLector.setText(datos[3]);
+            txt_telefonoLector.setText(datos[4]);
+            txt_dniLector.setText(datos[5]);
+        } catch (IOException ex) {
+            Logger.getLogger(frm_Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_tab_lectoresMouseClicked
+
     private void txt_barraBuscarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_barraBuscarKeyPressed
         try {
             String dni = txt_barraBuscar.getText();
@@ -1574,13 +1695,13 @@ public class frm_Principal extends javax.swing.JFrame {
             if(obj.buscarLector(dni)){
                 System.out.println("ENCONTRADO");
                 llenar_tabla_buscados(dni);
-                         
+
             }
             else{
                 System.out.println("NO ENCONTRADO");
                 llenar_tabla();
             }
-            
+
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -1781,6 +1902,7 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
