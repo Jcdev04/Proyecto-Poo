@@ -4,7 +4,10 @@
  */
 package Clases;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -119,5 +122,23 @@ public class Libro {
             System.out.println(e.getMessage());
         }
     }
+    
+    public boolean verificarLibroRepetido(String ID, String nombre) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        boolean confirmar = false;
+        while((fila=br.readLine())!=null){
+            String cod=fila.split("\\|")[0];
+            String cod2=fila.split("\\|")[1];
+            if(cod.equals(ID) || cod2.equals(nombre)){
+                confirmar = true;
+                break;
+            }
+        }
+        br.close();
+        return confirmar;
+    }
+    
+    
     
 }

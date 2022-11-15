@@ -106,6 +106,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         pnl_nuevoLector = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         pnl3 = new javax.swing.JPanel();
         txt_idLibro = new javax.swing.JTextField();
         txt_cantidadLibro = new javax.swing.JTextField();
@@ -509,7 +510,7 @@ public class frm_Principal extends javax.swing.JFrame {
 
         bg_principal.add(pnl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
-        pnl2.setBackground(new java.awt.Color(255, 0, 51));
+        pnl2.setBackground(new java.awt.Color(255, 255, 255));
         pnl2.setPreferredSize(new java.awt.Dimension(660, 600));
 
         txt_barraBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -596,32 +597,44 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel21.setText("Busque por DNI:");
+
         javax.swing.GroupLayout pnl2Layout = new javax.swing.GroupLayout(pnl2);
         pnl2.setLayout(pnl2Layout);
         pnl2Layout.setHorizontalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pnl_modificarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl2Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl2Layout.createSequentialGroup()
+                                .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jSeparator10)))
+                    .addGroup(pnl2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnl_nuevoLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pnl_modificarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pnl_eliminarLector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37))
             .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         pnl2Layout.setVerticalGroup(
             pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl2Layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
+                .addGap(145, 145, 145)
+                .addGroup(pnl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_barraBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -637,7 +650,7 @@ public class frm_Principal extends javax.swing.JFrame {
 
         pnl3.setBackground(new java.awt.Color(255, 255, 255));
 
-        txt_idLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_idLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_idLibro.setBorder(null);
         txt_idLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -645,7 +658,7 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         });
 
-        txt_cantidadLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_cantidadLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_cantidadLibro.setBorder(null);
         txt_cantidadLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -653,13 +666,13 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         });
 
-        txt_editorialLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_editorialLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_editorialLibro.setBorder(null);
 
-        txt_tituloLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_tituloLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_tituloLibro.setBorder(null);
 
-        txt_autorLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_autorLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_autorLibro.setBorder(null);
         txt_autorLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -667,7 +680,7 @@ public class frm_Principal extends javax.swing.JFrame {
             }
         });
 
-        txt_geneLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_geneLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_geneLibro.setBorder(null);
         txt_geneLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -695,7 +708,7 @@ public class frm_Principal extends javax.swing.JFrame {
 
         jSeparator5.setBackground(new java.awt.Color(49, 122, 199));
 
-        txt_anioLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_anioLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_anioLibro.setBorder(null);
         txt_anioLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -716,7 +729,7 @@ public class frm_Principal extends javax.swing.JFrame {
 
         jSeparator8.setBackground(new java.awt.Color(49, 122, 199));
 
-        txt_prestaLibro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_prestaLibro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_prestaLibro.setBorder(null);
         txt_prestaLibro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -828,7 +841,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl3Layout.setVerticalGroup(
             pnl3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl3Layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
+                .addContainerGap(73, Short.MAX_VALUE)
                 .addGroup(pnl3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl3Layout.createSequentialGroup()
                         .addGroup(pnl3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1406,27 +1419,41 @@ public class frm_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_prestaLibroKeyTyped
 
     private void pnl_subirLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_subirLibroMouseClicked
-        System.out.println("SUBIR");
-        String id = txt_idLibro.getText(); String titulo = txt_tituloLibro.getText(); String autor = txt_autorLibro.getText();
-        String genero = txt_geneLibro.getText(); String anio = txt_anioLibro.getText(); String editorial = txt_editorialLibro.getText();
-        int cantidad = Integer.parseInt(txt_cantidadLibro.getText()); int l_prestar = Integer.parseInt(txt_prestaLibro.getText());
-        Libro obj = new Libro(id,titulo,autor,genero,anio,editorial,cantidad,l_prestar);
-        obj.registrarLibro();                    
+        if(!(txt_idLibro.getText().isEmpty()) && !(txt_tituloLibro.getText().isEmpty()) && !(txt_autorLibro.getText().isEmpty()) && !(txt_geneLibro.getText().isEmpty()) && !(txt_anioLibro.getText().isEmpty()) && !(txt_editorialLibro.getText().isEmpty()) && !(txt_prestaLibro.getText().isEmpty()) && !(txt_cantidadLibro.getText().isEmpty())){
+            System.out.println("SUBIDO");
+            String id = txt_idLibro.getText(); String titulo = txt_tituloLibro.getText(); String autor = txt_autorLibro.getText();
+            String genero = txt_geneLibro.getText(); String anio = txt_anioLibro.getText(); String editorial = txt_editorialLibro.getText();
+            int cantidad = Integer.parseInt(txt_cantidadLibro.getText()); int l_prestar = Integer.parseInt(txt_prestaLibro.getText());
+            Libro obj = new Libro(id,titulo,autor,genero,anio,editorial,cantidad,l_prestar);
+            try {
+                if(obj.verificarLibroRepetido(id, titulo)){
+                    obj.registrarLibro();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(frm_Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Hay uno o más campos vacíos");
+        }
     }//GEN-LAST:event_pnl_subirLibroMouseClicked
 
     private void pnl_eliminarLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_eliminarLectorMouseClicked
         try{
-            Lector obj=new Lector();
-            String nombre = txt_nombresLector.getText();
-            obj.set_eliminarLector(nombre);
-            llenar_tabla();            
+            if(tab_lectores.getSelectedRow()!=-1){
+                Lector obj=new Lector();
+                String nombre = txt_nombresLector.getText();
+                obj.set_eliminarLector(nombre);
+                llenar_tabla();
+            }else{
+                JOptionPane.showMessageDialog(null, "Debe seleccionar un lector");
+            }
         }catch(IOException e){
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_pnl_eliminarLectorMouseClicked
 
     private void pnl_nuevoLectorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_nuevoLectorMouseClicked
-
         deshabilitarPanels(7); 
         limpiarCajas();
     }//GEN-LAST:event_pnl_nuevoLectorMouseClicked
@@ -1450,8 +1477,6 @@ public class frm_Principal extends javax.swing.JFrame {
             llenar_tabla();
             System.out.println(ex.getMessage());
         }
-        
-        
     }//GEN-LAST:event_pnl_LectormodificadoMouseClicked
 
     private void txt_dniLectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dniLectorKeyTyped
@@ -1753,6 +1778,7 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel25;
