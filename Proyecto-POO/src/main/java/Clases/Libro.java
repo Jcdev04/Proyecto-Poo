@@ -24,8 +24,7 @@ public class Libro {
     private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLibros.txt";
     File file;
 
-    public Libro(String libro_id, String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
-        this.libro_id = libro_id;
+    public Libro(String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
@@ -116,7 +115,7 @@ public class Libro {
         
         try{
             FileWriter fw = new FileWriter(ruta,true);           
-            String fila= this.libro_id+"|"+this.titulo+"|"+ this.autor+"|"+this.genero+"|"+this.a_publicacion+"|"+this.editorial+"|"+this.n_ejemplares+"|"+this.ejemplares_disponibles+"\n";          
+            String fila= get_generar_codigo()+"|"+this.titulo+"|"+ this.autor+"|"+this.genero+"|"+this.a_publicacion+"|"+this.editorial+"|"+this.n_ejemplares+"|"+this.ejemplares_disponibles+"\n";          
             fw.write(fila);
             fw.close();
         }catch(IOException e){
@@ -150,7 +149,16 @@ public class Libro {
         br.close();
         return coleccion;
     }
-    
+     public int get_generar_codigo() throws IOException{
+        //BufferedReader br = new BufferedReader(get_archivo());
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        String fila; int codigo=0;
+        while((fila=br.readLine())!=null){
+            codigo=Integer.parseInt(fila.split("\\|")[0]);
+        }
+        br.close();
+        return codigo+1;        
+    }
     
     
     

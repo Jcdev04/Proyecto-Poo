@@ -39,8 +39,8 @@ public class Lector {
        
         file = new File(ruta);      
     }
-    
 
+    
     public String getNombres() {
         return nombres;
     }
@@ -145,14 +145,15 @@ public class Lector {
         br.close();
         return coleccion;
     }
-    public ArrayList<String> getLectoresPorDni(String dni) throws FileNotFoundException, IOException{
-        ArrayList<String> coleccion = new ArrayList<>();
+    public String getLectoresPorDni(String dni) throws FileNotFoundException, IOException{
+        String coleccion = "";
         BufferedReader br = new BufferedReader(new FileReader(ruta));
         
         String fila;
         while((fila=br.readLine())!=null){
             if(fila.split("\\|")[5].equals(dni)){
-               coleccion.add(fila);   
+               coleccion = fila; 
+               break;
             }                  
         }
         br.close();
@@ -185,7 +186,7 @@ public class Lector {
         this.file=lector;
     }   
 
-    public void set_eliminarLector(String nombre) throws FileNotFoundException, IOException{
+    public void set_eliminarLector(String id) throws FileNotFoundException, IOException{
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String linea;
         //Creando un archivo temporal
@@ -193,8 +194,8 @@ public class Lector {
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
-            String nam=linea.split("\\|")[1];
-            if(!nam.equals(nombre)){
+            String nam=linea.split("\\|")[0];
+            if(!nam.equals(id)){
                 fw.write(linea+"\n");
             }
         }
@@ -215,6 +216,17 @@ public class Lector {
                 return true;
             }
         }
+        return false;
+    }
+      public boolean get_repetido(String dni) throws FileNotFoundException, IOException{      
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        String fila;
+        while((fila=br.readLine())!=null){
+            if(dni.equals(fila.split("\\|")[5])){
+                return true;
+            }                                              
+        }      
+        br.close();
         return false;
     }
 
