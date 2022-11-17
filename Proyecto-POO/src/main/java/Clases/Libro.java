@@ -22,6 +22,7 @@ public class Libro {
     private int n_ejemplares;
     private int ejemplares_disponibles;
     private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLibros.txt";
+
     File file;
 
     public Libro(String titulo, String autor, String genero, String a_publicacion, String nombre_editorial, int n_ejemplares, int ejemplares_disponibles) {
@@ -35,15 +36,11 @@ public class Libro {
         file = new File(ruta);
     }
     public Libro(){
-       
         file = new File(ruta);      
     }
-    
-
     public String getLibro_id() {
         return libro_id;
     }
-
     public void setLibro_id(String libro_id) {
         this.libro_id = libro_id;
     }
@@ -108,12 +105,11 @@ public class Libro {
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String fila = null;
         String genero="",autor="",anio="",cod="",edito="",name="";
+        Boolean confirmar = false;
         int cantidad=0, ejemplares=0;
-        Lector obj = new Lector();    
         while((fila=br.readLine())!=null){
             name=fila.split("\\|")[1];           
-            if(name.equals(titulo) && obj.get_repetido(dni)){
-                
+            if(name.equals(titulo)){
                 genero = fila.split("\\|")[3];
                 autor = fila.split("\\|")[2];
                 anio = fila.split("\\|")[4];
@@ -123,24 +119,50 @@ public class Libro {
                 ejemplares = Integer.parseInt(fila.split("\\|")[7]);
                 ejemplares -= 1;            
                 System.out.println("SI");
-                
+                confirmar =true;
+                break;
             }
-        }        
-        Libro obj2 = new Libro();    
-        br.close();   
-        obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
-        
+        }
+        br.close();
+        if(confirmar){
+            Libro obj2 = new Libro();    
+            obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
+        }
     }
     
-    public void devolver(String titulo, String dni) throws FileNotFoundException, IOException{
+    public boolean verificarPrestamo(String dni, String titulo) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        Lector lector = new Lector();
+        boolean confirmar = false;
+        int cantidad = 0;
+        while((fila=br.readLine())!=null){
+            String[] cod = fila.split("\\|");
+            if(cod[0].equals(titulo)){
+                cantidad = Integer.parseInt(cod[7]);
+                cantidad--;
+                if(cantidad>=0){
+                    if(lector.buscarPorDNI(dni)){
+                        confirmar = true;
+                        break;
+                    }
+                }
+            }
+        }
+        br.close();
+        return confirmar;
+    }
+    
+    public void devolver(String titulo) throws FileNotFoundException, IOException{
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String fila = null;
         String genero="",autor="",anio="",cod="",edito="",name="";
         int cantidad=0, ejemplares=0;
         Lector obj = new Lector();    
+        Boolean confirmar = false;
         while((fila=br.readLine())!=null){
             name=fila.split("\\|")[1];           
-            if(name.equals(titulo) && obj.get_repetido(dni)){
+            if(name.equals(titulo)){
                 
                 genero = fila.split("\\|")[3];
                 autor = fila.split("\\|")[2];
@@ -151,13 +173,39 @@ public class Libro {
                 ejemplares = Integer.parseInt(fila.split("\\|")[7]);
                 ejemplares += 1;            
                 System.out.println("SI");
-                
+                confirmar = true;
             }
-        }        
-        Libro obj2 = new Libro();    
-        br.close();   
-        obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
+        }
+        if(confirmar){
+            Libro obj2 = new Libro();
+            obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
+        }
     }
+    
+    public boolean verificarDevolucion(String dni, String titulo) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        Lector lector = new Lector();
+        boolean confirmar = false;
+        int cantidad = 0;
+        while((fila=br.readLine())!=null){
+            String[] cod = fila.split("\\|");
+            if(cod[0].equals(titulo)){
+                cantidad = Integer.parseInt(cod[7]);
+                cantidad++;
+                if(cantidad<=Integer.parseInt(cod[6])){
+                    if(lector.buscarPorDNI(dni)){
+                        confirmar = true;
+                        break;
+                    }
+                }
+            }
+        }
+        br.close();
+        return confirmar;
+    }
+    
+    
     public void registrarLibro() {
         
         try{
@@ -205,6 +253,8 @@ public class Libro {
         br.close();
         return confirmar;
     }
+    
+    
     public ArrayList<String> getLibros() throws FileNotFoundException, IOException{
         ArrayList<String> coleccion = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(ruta));

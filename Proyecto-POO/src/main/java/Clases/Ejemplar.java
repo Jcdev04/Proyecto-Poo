@@ -21,6 +21,7 @@ public class Ejemplar {
    private String libro_id;
    private boolean estado;
    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//Ejemplares.txt";
+
    private File file;
 
     public Ejemplar(int ejemplar_id, String libro_id, boolean estado) {

@@ -23,7 +23,9 @@ public class Lector {
     private String correo;
     private String telefono;
     private String estado_lector;
-    private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
+    //private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
+    private String ruta ="D://RegistroDeLectores.txt";
+    
     File file ;
 
     public Lector(String dni, String nombre, String apellidos, String correo, String telefono, String estado_lector) {
@@ -227,7 +229,20 @@ public class Lector {
         br.close();
         return false;
     }
- 
+    public boolean buscarPorDNI(String dni) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        boolean confirmar = false;
+        while((fila=br.readLine())!=null){
+            String cod=fila.split("\\|")[0];
+            if(cod.equals(dni)){
+                confirmar = true;
+                break;
+            }
+        }
+        br.close();
+        return confirmar;
+    }
 
        
 }

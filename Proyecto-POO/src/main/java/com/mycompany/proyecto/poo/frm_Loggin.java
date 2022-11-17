@@ -5,6 +5,14 @@
 package com.mycompany.proyecto.poo;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,11 +21,12 @@ import java.awt.Color;
 public class frm_Loggin extends javax.swing.JFrame {
 
     int mouseX, mouseY;
+    private String ruta = "D://Administradores.txt";
+    File file;
 
     public frm_Loggin() {
-        
-        
         initComponents();
+        file = new File(ruta);
     }
 
     /**
@@ -96,25 +105,10 @@ public class frm_Loggin extends javax.swing.JFrame {
 
         txt_user.setText("Ingrese su codigo de usuario");
         txt_user.setBorder(null);
-        txt_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txt_userMousePressed(evt);
-            }
-        });
-        txt_user.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_userActionPerformed(evt);
-            }
-        });
         pnl_fondo.add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 290, 40));
 
         txt_pass.setText("**************");
         txt_pass.setBorder(null);
-        txt_pass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txt_passMousePressed(evt);
-            }
-        });
         pnl_fondo.add(txt_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 290, 40));
 
         jLabel5.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
@@ -279,37 +273,28 @@ public class frm_Loggin extends javax.swing.JFrame {
         pnl_ingresar.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_lbl_ingresarMouseExited
 
-    private void txt_userMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_userMousePressed
-        if(txt_user.getText().equals("Ingrese su codigo de usuario")){
-            txt_user.setText("");
-            txt_user.setForeground(Color.black);
-        }
-        if(String.valueOf(txt_pass.getPassword()).isEmpty()){
-            txt_pass.setText("**************");
-            txt_pass.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_txt_userMousePressed
-
-    private void txt_passMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_passMousePressed
-        
-        if(String.valueOf(txt_pass.getPassword()).equals("**************")){
-            txt_pass.setText("");
-            txt_pass.setForeground(Color.black);
-        }
-        if(txt_user.getText().isEmpty()){
-            txt_user.setText("Ingrese su codigo de usuario");
-            txt_user.setForeground(Color.gray);
-            
-        }
-    }//GEN-LAST:event_txt_passMousePressed
-
     private void pnl_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_ingresarMouseClicked
-        System.out.println("INGRESAR");
+        try {
+            BufferedReader br=new BufferedReader(new FileReader(ruta));
+            Boolean confirmar = false;
+            if(txt_user.getText().equals("josuejdk") && txt_pass.getText().equals("edu12345")){
+                        frm_Principal form = new frm_Principal();
+                        form.setVisible(true);
+                        this.setVisible(false);  
+                        confirmar = true;
+            }
+            
+            if(confirmar)
+            JOptionPane.showMessageDialog(null, "Acceso concedido");    
+            else 
+            JOptionPane.showMessageDialog(null, "Acceso denegado");
+            br.close();
+        } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error inesperado","MENSAJE", JOptionPane.WARNING_MESSAGE);
+        } catch (IOException ex) {
+            Logger.getLogger(frm_Loggin.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_pnl_ingresarMouseClicked
-
-    private void txt_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_userActionPerformed
 
     /**
      * @param args the command line arguments
@@ -365,4 +350,8 @@ public class frm_Loggin extends javax.swing.JFrame {
     private javax.swing.JPasswordField txt_pass;
     private javax.swing.JTextField txt_user;
     // End of variables declaration//GEN-END:variables
+
+    private void setVisibile(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

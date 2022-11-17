@@ -290,7 +290,6 @@ public class frm_Principal extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 2, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\reloj.png")); // NOI18N
         jLabel9.setText("Hoy es "+ dia+ " de "+mesActual(mes)+" del "+anio_f);
 
         javax.swing.GroupLayout navLayout = new javax.swing.GroupLayout(nav);
@@ -318,7 +317,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\menu.png")); // NOI18N
 
         jSeparator1.setBackground(new java.awt.Color(124, 246, 244));
 
@@ -340,7 +338,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\principal.png")); // NOI18N
         jLabel2.setText("PRINCIPAL");
 
         javax.swing.GroupLayout tab1Layout = new javax.swing.GroupLayout(tab1);
@@ -371,7 +368,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\registro.png")); // NOI18N
         jLabel3.setText("LECTORES");
 
         javax.swing.GroupLayout tab2Layout = new javax.swing.GroupLayout(tab2);
@@ -403,7 +399,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\añadir.png")); // NOI18N
         jLabel4.setText("LIBROS");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
@@ -435,7 +430,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\prestamo.png")); // NOI18N
         jLabel5.setText("PRESTAMO");
 
         javax.swing.GroupLayout tab4Layout = new javax.swing.GroupLayout(tab4);
@@ -466,7 +460,6 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\devolution.png")); // NOI18N
         jLabel6.setText("DEVOLUCION");
 
         javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
@@ -858,14 +851,19 @@ public class frm_Principal extends javax.swing.JFrame {
 
         bg_principal.add(pnl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
+        pnl4.setBackground(new java.awt.Color(255, 255, 255));
         pnl4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        pnl_prestarLibro.setBackground(new java.awt.Color(57, 79, 246));
+        pnl_prestarLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnl_prestarLibro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_prestarLibroMouseClicked(evt);
             }
         });
 
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("PRESTAR LIBRO");
         jLabel42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -878,64 +876,63 @@ public class frm_Principal extends javax.swing.JFrame {
         );
         pnl_prestarLibroLayout.setVerticalGroup(
             pnl_prestarLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        pnl4.add(pnl_prestarLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 120, 30));
+        pnl4.add(pnl_prestarLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 120, 40));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("INGRESE SU  DNI");
-        pnl4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 130, 30));
+        pnl4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 130, 30));
 
         jLabel41.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("INGRESE EL NOMBRE DEL LIBRO");
-        pnl4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 210, 30));
+        pnl4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 200, 30));
 
-        txt_prestarDni.setBackground(new java.awt.Color(219, 154, 188));
-        txt_prestarDni.setForeground(new java.awt.Color(0, 0, 0));
         txt_prestarDni.setBorder(null);
-        pnl4.add(txt_prestarDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, 30));
+        pnl4.add(txt_prestarDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 190, 30));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        pnl4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 180, 10));
+        jSeparator3.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        pnl4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 190, 2));
 
-        txt_prestar.setBackground(new java.awt.Color(219, 154, 188));
-        txt_prestar.setForeground(new java.awt.Color(0, 0, 0));
         txt_prestar.setBorder(null);
-        pnl4.add(txt_prestar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 180, 30));
+        pnl4.add(txt_prestar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 200, 30));
 
         jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        pnl4.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 180, 10));
+        jSeparator6.setPreferredSize(new java.awt.Dimension(0, 1));
+        pnl4.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 200, 5));
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\imagenes\\fondo prestamo.png")); // NOI18N
         pnl4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         bg_principal.add(pnl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
         pnl5.setBackground(new java.awt.Color(255, 255, 255));
         pnl5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnl5.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 160, 20));
-        pnl5.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 160, 10));
+        pnl5.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 160, 20));
+        pnl5.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 160, 10));
 
         txt_devolverTitulo.setBorder(null);
-        pnl5.add(txt_devolverTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 160, 30));
+        pnl5.add(txt_devolverTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 160, 30));
 
         txt_devolverDni.setBorder(null);
-        pnl5.add(txt_devolverDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 160, 30));
+        pnl5.add(txt_devolverDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, 160, 30));
 
+        btn_devolver.setBackground(new java.awt.Color(51, 51, 255));
+        btn_devolver.setForeground(new java.awt.Color(0, 0, 236));
         btn_devolver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_devolverMouseClicked(evt);
             }
         });
 
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("DEVOLVER LIBRO");
         jLabel45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -944,26 +941,24 @@ public class frm_Principal extends javax.swing.JFrame {
         btn_devolver.setLayout(btn_devolverLayout);
         btn_devolverLayout.setHorizontalGroup(
             btn_devolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
         );
         btn_devolverLayout.setVerticalGroup(
             btn_devolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        pnl5.add(btn_devolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 120, 30));
+        pnl5.add(btn_devolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 150, 40));
 
         jLabel44.setFont(new java.awt.Font("Roboto Medium", 1, 12)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(0, 0, 0));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("Ingrese el titulo a devolver");
-        pnl5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 160, 30));
+        pnl5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 160, 30));
 
         jLabel7.setFont(new java.awt.Font("Roboto Medium", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("ingrese dni del lector");
-        pnl5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 130, 30));
+        pnl5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 130, 30));
         pnl5.add(bggg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 500));
 
         bg_principal.add(pnl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -2099,10 +2094,12 @@ public class frm_Principal extends javax.swing.JFrame {
             String titulo = txt_prestar.getText();
             String dni = txt_prestarDni.getText();
             Libro obj = new Libro();
-            if(!"xd".equals(titulo)){
+            //VERIFICAR QUE EL TÍTULO EXISTA
+            //QUE NO PRESTE SI SE LLEGA A 0
+            //VERIFICAR QUE EL DNI EXISTA 
+            if(obj.verificarPrestamo(dni, titulo)){
                 System.out.println("SE PUEDE PRESTAR");
                 obj.prestar(titulo, dni);
-                
             }
             else{
                 System.out.println("NO SE PRESTA");
@@ -2112,7 +2109,6 @@ public class frm_Principal extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(frm_Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }//GEN-LAST:event_pnl_prestarLibroMouseClicked
 
     private void btn_devolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_devolverMouseClicked
@@ -2120,9 +2116,10 @@ public class frm_Principal extends javax.swing.JFrame {
             String titulo = txt_devolverTitulo.getText();
             String dni = txt_devolverDni.getText();
             Libro obj = new Libro();
-            if(!"xd".equals(titulo)){
+            
+            if(!obj.verificarDevolucion(dni, titulo)){
                 System.out.println("SE PUEDE DEVOLVER");
-                obj.devolver(titulo, dni);              
+                obj.devolver(titulo);              
             }
             else{
                 System.out.println("NO SE DEVUELVE");
@@ -2500,4 +2497,8 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JTextField txt_telefonoLector1;
     private javax.swing.JTextField txt_tituloLibro;
     // End of variables declaration//GEN-END:variables
+
+    void setVisibile(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
