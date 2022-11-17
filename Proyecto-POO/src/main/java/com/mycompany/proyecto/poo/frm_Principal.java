@@ -2049,6 +2049,7 @@ public class frm_Principal extends javax.swing.JFrame {
         String anio = txt_anioLibro.getText();
         String editorial = txt_editorialLibro.getText();
         int ejemplares = 0;
+        
         if(!txt_cantidadLibro.getText().isEmpty()){
             ejemplares = Integer.parseInt(txt_cantidadLibro.getText());
         }
