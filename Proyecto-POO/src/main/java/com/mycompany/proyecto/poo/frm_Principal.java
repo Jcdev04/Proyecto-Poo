@@ -229,8 +229,8 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         jSeparator30 = new javax.swing.JSeparator();
         jSeparator31 = new javax.swing.JSeparator();
-        pnl_subirLibro1 = new javax.swing.JPanel();
-        jLabel50 = new javax.swing.JLabel();
+        btn_modificarLibro = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         jSeparator32 = new javax.swing.JSeparator();
         jSeparator33 = new javax.swing.JSeparator();
@@ -1168,6 +1168,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel29.setText("DNI");
 
         pnl_Lectormodificado.setBackground(new java.awt.Color(49, 122, 199));
+        pnl_Lectormodificado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pnl_Lectormodificado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_LectormodificadoMouseClicked(evt);
@@ -1583,32 +1584,33 @@ public class frm_Principal extends javax.swing.JFrame {
 
         jSeparator31.setBackground(new java.awt.Color(49, 122, 199));
 
-        pnl_subirLibro1.setBackground(new java.awt.Color(49, 122, 199));
-        pnl_subirLibro1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_modificarLibro.setBackground(new java.awt.Color(49, 122, 199));
+        btn_modificarLibro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnl_subirLibro1MouseClicked(evt);
+                btn_modificarLibroMouseClicked(evt);
             }
         });
 
-        jLabel50.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("Subir Libro");
-        jLabel50.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel22.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("Modificar Libro");
+        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout pnl_subirLibro1Layout = new javax.swing.GroupLayout(pnl_subirLibro1);
-        pnl_subirLibro1.setLayout(pnl_subirLibro1Layout);
-        pnl_subirLibro1Layout.setHorizontalGroup(
-            pnl_subirLibro1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+        javax.swing.GroupLayout btn_modificarLibroLayout = new javax.swing.GroupLayout(btn_modificarLibro);
+        btn_modificarLibro.setLayout(btn_modificarLibroLayout);
+        btn_modificarLibroLayout.setHorizontalGroup(
+            btn_modificarLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
         );
-        pnl_subirLibro1Layout.setVerticalGroup(
-            pnl_subirLibro1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+        btn_modificarLibroLayout.setVerticalGroup(
+            btn_modificarLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
         jLabel51.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel51.setText("N° Ejemplares");
+        jLabel51.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jSeparator32.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -1660,8 +1662,8 @@ public class frm_Principal extends javax.swing.JFrame {
                                 .addComponent(jSeparator27, javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(tituloLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlModificarLibroLayout.createSequentialGroup()
-                        .addGap(360, 360, 360)
-                        .addComponent(pnl_subirLibro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(349, 349, 349)
+                        .addComponent(btn_modificarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(270, Short.MAX_VALUE))
         );
         pnlModificarLibroLayout.setVerticalGroup(
@@ -1708,9 +1710,9 @@ public class frm_Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator30, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)))
-                .addGap(19, 19, 19)
-                .addComponent(pnl_subirLibro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(btn_modificarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97))
         );
 
         bg_principal.add(pnlModificarLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -2056,6 +2058,7 @@ public class frm_Principal extends javax.swing.JFrame {
         }else{
             Libro obj = new Libro(titulo,autor,genero,anio,editorial,ejemplares, ejemplares);
             obj.registrarLibro();
+            deshabilitarPanels(3);
             llenar_tablaLibro();
             limpiarCajas();
         }
@@ -2147,9 +2150,25 @@ public class frm_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_anioLibroKeyTyped
 
-    private void pnl_subirLibro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_subirLibro1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnl_subirLibro1MouseClicked
+    private void btn_modificarLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modificarLibroMouseClicked
+        try {
+            int indice_fila=this.tab_libros.getSelectedRow();
+            String codigo=this.tab_libros.getValueAt(indice_fila,0).toString();
+            String titulo = tituloLibro.getText();
+            String autor = autorLibro.getText();
+            String genero = geneLibro.getText();
+            String anio = anioLibro.getText();
+            String editorial = editorialLibro.getText();
+            int ejemplares = Integer.parseInt(ejemplarLibro.getText());
+            Libro obj = new Libro();
+            obj.modificarLibro(codigo, titulo, autor, genero, anio, editorial, ejemplares, ejemplares);
+            llenar_tablaLibro();
+            deshabilitarPanels(3);
+        } catch (IOException ex) {
+            llenar_tablaLibro();
+            System.out.println(ex.getMessage());
+        }
+    }//GEN-LAST:event_btn_modificarLibroMouseClicked
 
     private void tab_librosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_librosMouseClicked
         try {
@@ -2353,6 +2372,7 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel bg_principal;
     private javax.swing.JLabel bggg;
     private javax.swing.JPanel btn_devolver;
+    private javax.swing.JPanel btn_modificarLibro;
     private javax.swing.JTextField editorialLibro;
     private javax.swing.JTextField ejemplarLibro;
     private javax.swing.JTextField geneLibro;
@@ -2370,6 +2390,7 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2400,7 +2421,6 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel6;
@@ -2465,7 +2485,6 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_prestarLibro;
     private javax.swing.JPanel pnl_subirLector1;
     private javax.swing.JPanel pnl_subirLibro;
-    private javax.swing.JPanel pnl_subirLibro1;
     private javax.swing.JPanel tab1;
     private javax.swing.JPanel tab2;
     private javax.swing.JPanel tab3;
