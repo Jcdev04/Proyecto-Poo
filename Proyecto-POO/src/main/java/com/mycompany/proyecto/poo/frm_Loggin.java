@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 public class frm_Loggin extends javax.swing.JFrame {
 
     int mouseX, mouseY;
-    private String ruta = "D://Administradores.txt";
+    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//Administradores.txt";
     File file;
 
     public frm_Loggin() {
@@ -39,9 +39,6 @@ public class frm_Loggin extends javax.swing.JFrame {
     private void initComponents() {
 
         pnl_fondo = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txt_user = new javax.swing.JTextField();
         txt_pass = new javax.swing.JPasswordField();
@@ -50,64 +47,27 @@ public class frm_Loggin extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        pnl_ingresar = new javax.swing.JPanel();
-        lbl_ingresar = new javax.swing.JLabel();
         pnl_head = new javax.swing.JPanel();
         pnl_cerrar = new javax.swing.JPanel();
         lbl_cerrar = new javax.swing.JLabel();
+        btn_ingresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
 
-        pnl_fondo.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_fondo.setBackground(new java.awt.Color(204, 204, 204));
         pnl_fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("UNIVERSITARIA");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        pnl_fondo.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, -1, 50));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\imagenes\\login.jpg")); // NOI18N
+        pnl_fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 250, 500));
 
-        jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("BIBLIOTECA ");
-        pnl_fondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 160, 50));
-
-        jLabel2.setIcon(new javax.swing.JLabel() {
-            public javax.swing.Icon getIcon() {
-                try {
-                    return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/AnthonyZabs/SimpleJavaLoginMD/main/src/com/images/logo.png")
-                    );
-                } catch (java.net.MalformedURLException e) {
-                }
-                return null;
-            }
-        }.getIcon());
-        pnl_fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 150, 140));
-
-        jLabel1.setIcon(new javax.swing.JLabel() {
-            public javax.swing.Icon getIcon() {
-                try {
-                    return new javax.swing.ImageIcon(
-                        new java.net.URL("https://raw.githubusercontent.com/AnthonyZabs/SimpleJavaLoginMD/main/src/com/images/city.png")
-                    );
-                } catch (java.net.MalformedURLException e) {
-                }
-                return null;
-            }
-        }.getIcon());
-        pnl_fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 270, 500));
-
-        txt_user.setText("Ingrese su codigo de usuario");
+        txt_user.setBackground(new java.awt.Color(204, 204, 204));
         txt_user.setBorder(null);
         pnl_fondo.add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 290, 40));
 
-        txt_pass.setText("**************");
+        txt_pass.setBackground(new java.awt.Color(204, 204, 204));
         txt_pass.setBorder(null);
         pnl_fondo.add(txt_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 290, 40));
 
@@ -125,47 +85,7 @@ public class frm_Loggin extends javax.swing.JFrame {
         pnl_fondo.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 290, 20));
         pnl_fondo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 290, 20));
 
-        pnl_ingresar.setBackground(new java.awt.Color(0, 134, 190));
-        pnl_ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnl_ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnl_ingresarMouseClicked(evt);
-            }
-        });
-
-        lbl_ingresar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        lbl_ingresar.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_ingresar.setText("INGRESAR");
-        lbl_ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lbl_ingresarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lbl_ingresarMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnl_ingresarLayout = new javax.swing.GroupLayout(pnl_ingresar);
-        pnl_ingresar.setLayout(pnl_ingresarLayout);
-        pnl_ingresarLayout.setHorizontalGroup(
-            pnl_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_ingresarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl_ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        pnl_ingresarLayout.setVerticalGroup(
-            pnl_ingresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ingresarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl_ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        pnl_fondo.add(pnl_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 110, 40));
-
-        pnl_head.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_head.setBackground(new java.awt.Color(204, 204, 204));
         pnl_head.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 pnl_headMouseDragged(evt);
@@ -177,7 +97,7 @@ public class frm_Loggin extends javax.swing.JFrame {
             }
         });
 
-        pnl_cerrar.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_cerrar.setBackground(new java.awt.Color(204, 204, 204));
         pnl_cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnl_cerrarMouseClicked(evt);
@@ -228,6 +148,19 @@ public class frm_Loggin extends javax.swing.JFrame {
 
         pnl_fondo.add(pnl_head, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 40));
 
+        btn_ingresar.setBackground(new java.awt.Color(0, 134, 190));
+        btn_ingresar.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        btn_ingresar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_ingresar.setText("INGRESAR");
+        btn_ingresar.setBorder(null);
+        btn_ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ingresarMouseClicked(evt);
+            }
+        });
+        pnl_fondo.add(btn_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 110, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -262,39 +195,21 @@ public class frm_Loggin extends javax.swing.JFrame {
     }//GEN-LAST:event_pnl_cerrarMouseEntered
 
     private void pnl_cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_cerrarMouseExited
-        pnl_cerrar.setBackground(Color.white);
+        pnl_cerrar.setBackground(new Color(204,204,204));
     }//GEN-LAST:event_pnl_cerrarMouseExited
 
-    private void lbl_ingresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_ingresarMouseEntered
-        pnl_ingresar.setBackground(new Color(0,150,223));
-    }//GEN-LAST:event_lbl_ingresarMouseEntered
-
-    private void lbl_ingresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_ingresarMouseExited
-        pnl_ingresar.setBackground(new Color(0,134,190));
-    }//GEN-LAST:event_lbl_ingresarMouseExited
-
-    private void pnl_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnl_ingresarMouseClicked
-        try {
-            BufferedReader br=new BufferedReader(new FileReader(ruta));
-            Boolean confirmar = false;
-            if(txt_user.getText().equals("josuejdk") && txt_pass.getText().equals("edu12345")){
+    private void btn_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ingresarMouseClicked
+        boolean confirmar = false;
+        if(txt_user.getText().equals("josuejdk") && txt_pass.getText().equals("edu12345")){
                         frm_Principal form = new frm_Principal();
                         form.setVisible(true);
                         this.setVisible(false);  
                         confirmar = true;
             }
-            
-            if(confirmar)
-            JOptionPane.showMessageDialog(null, "Acceso concedido");    
-            else 
-            JOptionPane.showMessageDialog(null, "Acceso denegado");
-            br.close();
-        } catch (FileNotFoundException ex) {
-            JOptionPane.showMessageDialog(null, "Ha ocurrido un error inesperado","MENSAJE", JOptionPane.WARNING_MESSAGE);
-        } catch (IOException ex) {
-            Logger.getLogger(frm_Loggin.class.getName()).log(Level.SEVERE, null, ex);
+        else{
+            JOptionPane.showMessageDialog(null,"CONTRASEÑA O CORREO INCORRECTOS");
         }
-    }//GEN-LAST:event_pnl_ingresarMouseClicked
+    }//GEN-LAST:event_btn_ingresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -332,21 +247,17 @@ public class frm_Loggin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_ingresar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl_cerrar;
-    private javax.swing.JLabel lbl_ingresar;
     private javax.swing.JPanel pnl_cerrar;
     private javax.swing.JPanel pnl_fondo;
     private javax.swing.JPanel pnl_head;
-    private javax.swing.JPanel pnl_ingresar;
     private javax.swing.JPasswordField txt_pass;
     private javax.swing.JTextField txt_user;
     // End of variables declaration//GEN-END:variables

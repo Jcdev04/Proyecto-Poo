@@ -143,14 +143,14 @@ public class frm_Principal extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         pnl5 = new javax.swing.JPanel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
         txt_devolverTitulo = new javax.swing.JTextField();
         txt_devolverDni = new javax.swing.JTextField();
         btn_devolver = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         bggg = new javax.swing.JLabel();
         pnlAgregarLector = new javax.swing.JPanel();
         jSeparator16 = new javax.swing.JSeparator();
@@ -317,6 +317,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\menu.png")); // NOI18N
 
         jSeparator1.setBackground(new java.awt.Color(124, 246, 244));
 
@@ -338,6 +339,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\principal.png")); // NOI18N
         jLabel2.setText("PRINCIPAL");
 
         javax.swing.GroupLayout tab1Layout = new javax.swing.GroupLayout(tab1);
@@ -368,6 +370,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\registro.png")); // NOI18N
         jLabel3.setText("LECTORES");
 
         javax.swing.GroupLayout tab2Layout = new javax.swing.GroupLayout(tab2);
@@ -399,6 +402,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\añadir.png")); // NOI18N
         jLabel4.setText("LIBROS");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
@@ -430,6 +434,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\prestamo.png")); // NOI18N
         jLabel5.setText("PRESTAMO");
 
         javax.swing.GroupLayout tab4Layout = new javax.swing.GroupLayout(tab4);
@@ -460,6 +465,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\iconos\\devolution.png")); // NOI18N
         jLabel6.setText("DEVOLUCION");
 
         javax.swing.GroupLayout tab5Layout = new javax.swing.GroupLayout(tab5);
@@ -545,18 +551,7 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl1.setBackground(new java.awt.Color(102, 255, 102));
         pnl1.setPreferredSize(new java.awt.Dimension(660, 600));
 
-        jLabel24.setIcon(new javax.swing.JLabel() {
-            public javax.swing.Icon getIcon() {
-                try {
-                    return new javax.swing.ImageIcon(
-                        new java.net.URL("https://bnz05pap001files.storage.live.com/y4mZg6GDjHW4TSqAxdzOqLJhb3BpHXRLR3uBwyYiDQH7Wuf7nwRRxaV94xGBibRLLDhkOXmeHlzEti_KFQ-yvAD0TbHYvsrI8fo4eDA8ZPjdyhsjDhxDWDVKzM6BRvjrzQ55K-dmajsNrNHY9VtipmCmO0IRJBH0zfN3neNq4Q5LDSH-25F5uoY6XpCMazLIbnSDlxgI34V2AmcrdRQeNAmqwcOSYSXr1y7j9I9rH1JfoU?encodeFailures=1&width=851&height=501")
-                    );
-                } catch (java.net.MalformedURLException e) {
-                }
-                return null;
-            }
-        }.getIcon());
-        jLabel24.setText("jLabel24");
+        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\imagenes\\xd.jpg")); // NOI18N
 
         javax.swing.GroupLayout pnl1Layout = new javax.swing.GroupLayout(pnl1);
         pnl1.setLayout(pnl1Layout);
@@ -882,15 +877,18 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl4.add(pnl_prestarLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 120, 40));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("INGRESE SU  DNI");
         pnl4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 130, 30));
 
         jLabel41.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("INGRESE EL NOMBRE DEL LIBRO");
         pnl4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 200, 30));
 
+        txt_prestarDni.setBackground(new java.awt.Color(219, 154, 188));
         txt_prestarDni.setBorder(null);
         pnl4.add(txt_prestarDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 190, 30));
 
@@ -899,6 +897,7 @@ public class frm_Principal extends javax.swing.JFrame {
         jSeparator3.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         pnl4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 190, 2));
 
+        txt_prestar.setBackground(new java.awt.Color(219, 154, 188));
         txt_prestar.setBorder(null);
         pnl4.add(txt_prestar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 200, 30));
 
@@ -908,20 +907,33 @@ public class frm_Principal extends javax.swing.JFrame {
         pnl4.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 200, 5));
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\imagenes\\fondo prestamo.png")); // NOI18N
         pnl4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         bg_principal.add(pnl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
 
         pnl5.setBackground(new java.awt.Color(255, 255, 255));
         pnl5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnl5.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 160, 20));
-        pnl5.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 160, 10));
+
+        jLabel50.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("INGRESE DNI DEL USUARIO");
+        pnl5.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 180, 30));
+
+        jLabel53.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("INGRESE EL NOMBRE DEL LIBRO");
+        pnl5.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 200, 30));
+        pnl5.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 160, 20));
+        pnl5.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 160, 10));
 
         txt_devolverTitulo.setBorder(null);
-        pnl5.add(txt_devolverTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 160, 30));
+        pnl5.add(txt_devolverTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 160, 30));
 
         txt_devolverDni.setBorder(null);
-        pnl5.add(txt_devolverDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, 160, 30));
+        pnl5.add(txt_devolverDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 160, 30));
 
         btn_devolver.setBackground(new java.awt.Color(51, 51, 255));
         btn_devolver.setForeground(new java.awt.Color(0, 0, 236));
@@ -948,17 +960,9 @@ public class frm_Principal extends javax.swing.JFrame {
             .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        pnl5.add(btn_devolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 150, 40));
+        pnl5.add(btn_devolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 150, 40));
 
-        jLabel44.setFont(new java.awt.Font("Roboto Medium", 1, 12)); // NOI18N
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("Ingrese el titulo a devolver");
-        pnl5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 160, 30));
-
-        jLabel7.setFont(new java.awt.Font("Roboto Medium", 1, 12)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("ingrese dni del lector");
-        pnl5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 130, 30));
+        bggg.setIcon(new javax.swing.ImageIcon("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo\\imagenes\\descarga.jpg")); // NOI18N
         pnl5.add(bggg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 500));
 
         bg_principal.add(pnl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 850, 500));
@@ -2098,9 +2102,6 @@ public class frm_Principal extends javax.swing.JFrame {
             String titulo = txt_prestar.getText();
             String dni = txt_prestarDni.getText();
             Libro obj = new Libro();
-            //VERIFICAR QUE EL TÍTULO EXISTA
-            //QUE NO PRESTE SI SE LLEGA A 0
-            //VERIFICAR QUE EL DNI EXISTA 
             if(obj.verificarPrestamo(dni, titulo)){
                 System.out.println("SE PUEDE PRESTAR");
                 obj.prestar(titulo, dni);
@@ -2415,17 +2416,17 @@ public class frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;

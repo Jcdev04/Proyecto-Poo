@@ -23,8 +23,8 @@ public class Lector {
     private String correo;
     private String telefono;
     private String estado_lector;
-    //private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
-    private String ruta ="D://RegistroDeLectores.txt";
+    private String ruta ="C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//RegistroDeLectores.txt";
+
     
     File file ;
 
@@ -112,7 +112,6 @@ public class Lector {
         }
     }
     public int get_generar_codigo() throws IOException{
-        //BufferedReader br = new BufferedReader(get_archivo());
         BufferedReader br = new BufferedReader(new FileReader(ruta));
         String fila; int codigo=0;
         while((fila=br.readLine())!=null){
@@ -234,7 +233,7 @@ public class Lector {
         String fila = null;
         boolean confirmar = false;
         while((fila=br.readLine())!=null){
-            String cod=fila.split("\\|")[0];
+            String cod=fila.split("\\|")[5];
             if(cod.equals(dni)){
                 confirmar = true;
                 break;

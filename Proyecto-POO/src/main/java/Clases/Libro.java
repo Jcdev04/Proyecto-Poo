@@ -138,7 +138,7 @@ public class Libro {
         int cantidad = 0;
         while((fila=br.readLine())!=null){
             String[] cod = fila.split("\\|");
-            if(cod[0].equals(titulo)){
+            if(cod[1].equals(titulo)){
                 cantidad = Integer.parseInt(cod[7]);
                 cantidad--;
                 if(cantidad>=0){
@@ -181,7 +181,7 @@ public class Libro {
             obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
         }
     }
-    
+ 
     public boolean verificarDevolucion(String dni, String titulo) throws FileNotFoundException, IOException{
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String fila = null;
@@ -190,7 +190,7 @@ public class Libro {
         int cantidad = 0;
         while((fila=br.readLine())!=null){
             String[] cod = fila.split("\\|");
-            if(cod[0].equals(titulo)){
+            if(cod[1].equals(titulo)){
                 cantidad = Integer.parseInt(cod[7]);
                 cantidad++;
                 if(cantidad<=Integer.parseInt(cod[6])){
@@ -221,7 +221,7 @@ public class Libro {
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String linea;
         //Creando un archivo temporal
-        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal2.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
@@ -281,7 +281,7 @@ public class Libro {
         BufferedReader br =new BufferedReader(new FileReader(ruta));
         String linea;
         
-        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal2.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
