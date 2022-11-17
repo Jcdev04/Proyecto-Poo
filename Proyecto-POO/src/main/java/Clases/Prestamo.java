@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  */
 public class Prestamo extends Operacion{
 
-    private String ruta = "D:\\Operaciones.txt";
+    private String ruta = "C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\ProyectoPoo//LibrosPrestados.txt";
     File file;
     
     public Prestamo(String dni, String fecha, String ejemplar_id) {
@@ -34,7 +34,7 @@ public class Prestamo extends Operacion{
         }
     }
     
-    public void consultarPrestamo(){
+    public void devolucion(){
         
     }
     

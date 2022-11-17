@@ -221,7 +221,7 @@ public class Libro {
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String linea;
         //Creando un archivo temporal
-        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal2.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
@@ -238,14 +238,13 @@ public class Libro {
         this.file=lector;
     }
     
-    public boolean verificarLibroRepetido(String ID, String nombre) throws FileNotFoundException, IOException{
+    public boolean verificarLibroRepetido(String nombre) throws FileNotFoundException, IOException{
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String fila = null;
         boolean confirmar = false;
         while((fila=br.readLine())!=null){
-            String cod=fila.split("\\|")[0];
-            String cod2=fila.split("\\|")[1];
-            if(cod.equals(ID) || cod2.equals(nombre)){
+            String name=fila.split("\\|")[1];
+            if(name.equals(nombre)){
                 confirmar = true;
                 break;
             }
@@ -281,7 +280,7 @@ public class Libro {
         BufferedReader br =new BufferedReader(new FileReader(ruta));
         String linea;
         
-        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal2.txt");
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
         FileWriter fw=new FileWriter(temporal, true);
         
         while((linea=br.readLine())!=null){
