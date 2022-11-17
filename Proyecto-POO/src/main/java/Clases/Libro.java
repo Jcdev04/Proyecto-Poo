@@ -104,12 +104,59 @@ public class Libro {
         this.ejemplares_disponibles = ejemplares_disponibles;
     }
     
-    public void prestar(){
+    public void prestar(String titulo, String dni) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        String genero="",autor="",anio="",cod="",edito="",name="";
+        int cantidad=0, ejemplares=0;
+        Lector obj = new Lector();    
+        while((fila=br.readLine())!=null){
+            name=fila.split("\\|")[1];           
+            if(name.equals(titulo) && obj.get_repetido(dni)){
+                
+                genero = fila.split("\\|")[3];
+                autor = fila.split("\\|")[2];
+                anio = fila.split("\\|")[4];
+                cod = fila.split("\\|")[0];
+                edito = fila.split("\\|")[5];
+                cantidad = Integer.parseInt(fila.split("\\|")[6]);
+                ejemplares = Integer.parseInt(fila.split("\\|")[7]);
+                ejemplares -= 1;            
+                System.out.println("SI");
+                
+            }
+        }        
+        Libro obj2 = new Libro();    
+        br.close();   
+        obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
         
     }
     
-    public void consultar_prestamo(){
-        
+    public void devolver(String titulo, String dni) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila = null;
+        String genero="",autor="",anio="",cod="",edito="",name="";
+        int cantidad=0, ejemplares=0;
+        Lector obj = new Lector();    
+        while((fila=br.readLine())!=null){
+            name=fila.split("\\|")[1];           
+            if(name.equals(titulo) && obj.get_repetido(dni)){
+                
+                genero = fila.split("\\|")[3];
+                autor = fila.split("\\|")[2];
+                anio = fila.split("\\|")[4];
+                cod = fila.split("\\|")[0];
+                edito = fila.split("\\|")[5];
+                cantidad = Integer.parseInt(fila.split("\\|")[6]);
+                ejemplares = Integer.parseInt(fila.split("\\|")[7]);
+                ejemplares += 1;            
+                System.out.println("SI");
+                
+            }
+        }        
+        Libro obj2 = new Libro();    
+        br.close();   
+        obj2.modificarLibro(cod,titulo,autor,genero,anio,edito,cantidad,ejemplares);
     }
     public void registrarLibro() {
         
@@ -121,6 +168,26 @@ public class Libro {
         }catch(IOException e){
             System.out.println(e.getMessage());
         }
+    }
+    public void eliminarLibro(String id) throws FileNotFoundException, IOException{
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String linea;
+        //Creando un archivo temporal
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
+        FileWriter fw=new FileWriter(temporal, true);
+        
+        while((linea=br.readLine())!=null){
+            String nam=linea.split("\\|")[0];
+            if(!nam.equals(id)){
+                fw.write(linea+"\n");
+            }
+        }
+        br.close();
+        fw.close(); 
+        file.delete();
+        File lector =new File(ruta);
+        temporal.renameTo(lector);    
+        this.file=lector;
     }
     
     public boolean verificarLibroRepetido(String ID, String nombre) throws FileNotFoundException, IOException{
@@ -159,6 +226,44 @@ public class Libro {
         br.close();
         return codigo+1;        
     }
+     public void modificarLibro(String codigo, String titulo,String autor, String genero, String anio, String editorial, int cantidad, int ejemplares) throws FileNotFoundException, IOException{
+        
+        BufferedReader br =new BufferedReader(new FileReader(ruta));
+        String linea;
+        
+        File temporal=new File("C:\\Users\\JOSUE CORDOVA\\OneDrive\\Documentos\\Temporal//Temporal.txt");
+        FileWriter fw=new FileWriter(temporal, true);
+        
+        while((linea=br.readLine())!=null){
+            if(linea.split("\\|")[0].equals(codigo)){
+                String fila= get_generar_codigo()+"|"+this.titulo+"|"+ this.autor+"|"+this.genero+"|"+this.a_publicacion+"|"+this.editorial+"|"+this.n_ejemplares+"|"+this.ejemplares_disponibles+"\n";
+                String f_modificado=codigo+"|"+titulo+"|"+autor+"|"+genero+"|"+anio+"|"+editorial+"|"+cantidad+"|"+ejemplares+"\n"; 
+                fw.write(f_modificado);               
+            }else{
+                fw.write(linea+"\n");
+            }
+        }
+        br.close();
+        fw.close(); 
+        file.delete();
+        File lector=new File(ruta);
+        temporal.renameTo(lector);    
+        this.file=lector;
+    }
+    public String get_registro(String codigo) throws FileNotFoundException, IOException{
+        
+        BufferedReader br=new BufferedReader(new FileReader(ruta));
+        String fila, registro = null;
+        while((fila=br.readLine())!=null){
+            String cod=fila.split("\\|")[0];
+            if(cod.equals(codigo)){
+                registro=fila; break;
+            }
+        }
+        br.close();
+        return registro;
+    }
+ 
     
     
     

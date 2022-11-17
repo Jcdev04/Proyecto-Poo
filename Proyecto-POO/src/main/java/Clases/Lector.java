@@ -120,8 +120,7 @@ public class Lector {
         return codigo+1;        
     }
     public String get_registro(String codigo) throws FileNotFoundException, IOException{
-        //FileReader fr=new FileReader(ruta);
-        //BufferedReader br=new BufferedReader(this.get_archivo());
+        
         BufferedReader br=new BufferedReader(new FileReader(ruta));
         String fila, registro = null;
         while((fila=br.readLine())!=null){
@@ -131,7 +130,6 @@ public class Lector {
             }
         }
         br.close();
-        //System.out.println(registro);
         return registro;
     }
     public ArrayList<String> getLectores() throws FileNotFoundException, IOException{
@@ -218,7 +216,7 @@ public class Lector {
         }
         return false;
     }
-      public boolean get_repetido(String dni) throws FileNotFoundException, IOException{      
+    public boolean get_repetido(String dni) throws FileNotFoundException, IOException{      
         BufferedReader br = new BufferedReader(new FileReader(ruta));
         String fila;
         while((fila=br.readLine())!=null){
@@ -229,6 +227,7 @@ public class Lector {
         br.close();
         return false;
     }
+ 
 
        
 }
